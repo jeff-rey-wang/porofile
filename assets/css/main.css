@@ -1,0 +1,23 @@
+@font-face {
+  src: url(../fonts/BeaufortforLOL-Regular.ttf);
+  font-family: beaufort;
+}
+body {
+  margin: 0px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: beaufort;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration-color: none;
+  box-sizing: border-box;
+}
+
+.section.active {
+  z-index: 2;
+  opacity: 1;
+}
