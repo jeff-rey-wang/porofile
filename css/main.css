@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.landing_page {
+  width: 100%;
+  height: 1080px;
+  background: rgba(17, 75, 95, 1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.porofile_logo {
+  width: 300px;
+  height: 300px;
+  background: url("../images/porofile_logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 27px;
+  left: 813px;
+}
+.view_profiles_button {
+  width: 199px;
+  height: 50px;
+  background: rgba(136, 212, 152, 1);
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 945px;
+  left: 855px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.search_icon {
+  width: 22px;
+  height: 22px;
+  background: url("../images/search_icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 14px;
+  left: 9px;
+}
+.view_profiles_text {
+  width: 163px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-family: Mitr;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center;
+}
+.added_players_container {
+  width: 439px;
+  height: 401px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 44px;
+  opacity: 1;
+  position: absolute;
+  top: 486px;
+  left: 700px;
+}
+.added_player_container {
+  width: 439px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 27px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.added_player_region_container {
+  width: 45px;
+  height: 45px;
+  background: rgba(243, 233, 210, 1);
+  padding: 4px 9px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.added_player_region_text {
+  width: 30px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 12px;
+  left: 7px;
+  font-family: Montserrat;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: center;
+}
+.added_player_username_container {
+  width: 300px;
+  height: 45px;
+  background: rgba(243, 233, 210, 1);
+  padding: 4px 9px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 72px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.added_player_username_text {
+  width: 274px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 12px;
+  left: 9px;
+  font-family: Montserrat;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.added_player_trash_container {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  position: absolute;
+  top: 12px;
+  left: 399px;
+}
+.added_player_trash_button {
+  width: 40px;
+  height: 40px;
+  background: rgba(193, 41, 46, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+
+.search_card {
+  width: 482px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 31px;
+  opacity: 1;
+  position: absolute;
+  top: 385px;
+  left: 700px;
+}
+.region_dropdown {
+  width: 80px;
+  height: 45px;
+  background: rgba(255, 255, 255, 1);
+  padding: 11px 18px;
+  margin: 9px;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.username_input_box {
+  width: 300px;
+  height: 45px;
+  background: rgba(255, 255, 255, 1);
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 111px;
+  vertical-align: middle;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.username_input {
+  width: 274px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  font-family: Montserrat;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+  vertical-align: middle;
+}
+.add_player_container {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  position: absolute;
+  top: 12px;
+  left: 442px;
+}
+.add_player_button {
+  width: 40px;
+  height: 40px;
+  background: rgba(136, 212, 152, 1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.plus_symbol {
+  width: 40px;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  top: 0px;
+  left: 10px;
+  font-family: Montserrat;
+  font-weight: Bold;
+  font-size: 32px;
+  opacity: 1;
+  text-align: center;
+}
+.title {
+  width: 253px;
+  color: rgba(243, 233, 210, 1);
+  position: absolute;
+  top: 127px;
+  left: 111px;
+  font-family: Poppins;
+  font-weight: Medium;
+  font-size: 64px;
+  opacity: 1;
+  text-align: left;
+}

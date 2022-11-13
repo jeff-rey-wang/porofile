@@ -1,26 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Porofile</title>
-
     <link
+      href="https://fonts.googleapis.com/css?family=Mitr&display=swap"
       rel="stylesheet"
-      href="assets\bootstrap-4.5.0-dist\css\bootstrap.min.css"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <div class="main-container">
-      <!-- Landing Page -->
-      <section class="home section active" id="home">
-        <div class="container">Testing</div>
-      </section>
-      <!-- Comparison Page -->
-      <section class="comparison section" id="comparison">
-        <div class="container"></div>
-      </section>
-    </div>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="landing_page">
+    <span class="title">Porofile</span>
+      <div class="porofile_logo"></div>
+      <div class="search_card">
+        <div class="region_dropdown"></div>
+        <div class="username_input_box"><input class="username_input" placeholder="username..."></input></div>
+        <div class="add_player_container">
+          <div class="add_player_button">
+            <span class="plus_symbol">+</span>
+          </div>
+        </div>
+      </div>
+      <div class="added_players_container">
+        <div class="added_player_container">
+          <div class="added_player_region_container"><span class="added_player_region_text">NA</span></div>
+          <div class="added_player_username_container"><span class="added_player_username_text">Username</span></div>
+          <div class="added_player_trash_container">
+            <div class="added_player_trash_button"> 
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <div class="view_profiles_button">
+        <div class="search_icon"></div>
+        <span class="view_profiles_text">View Profile(s)</span>
+      </div>
+    </div>
+  </body>
 </html>
