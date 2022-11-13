@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ComparisonPage - Porofile</title>
+    <meta property="og:title" content="ComparisonPage - Porofile" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Lexend;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.1;
+        color: var(--dl-color-grays-dark100);
+        background-color: var(--dl-color-grays-white100);
+
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      href="public/playground_assets/porofile_logo1.png"
+      type="icon/png"
+      sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+      ::placeholder{
+      color: #63667066;
+      }
+    </style>
+    <style data-section-id="dropdown">
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./comparison-page.css" rel="stylesheet" />
+
+      <div id="comparison_page" class="comparison-page-container">
+        <div class="comparison-page-header">
+          <div
+            class="porofile-home-btn-container porofile-home-btn-root-class-name"
+          >
+            <img
+              id="homepage_icon"
+              alt="image"
+              src="https://play.teleporthq.io/static/svg/default-img.svg"
+              class="porofile-home-btn-image"
+            />
+            <span id="homepage_porofile_text" class="porofile-home-btn-text">
+              <span>Porofile</span>
+            </span>
+          </div>
+          <div
+            id="shareButton"
+            class="sharebnt-container button sharebnt-root-class-name"
+          >
+            <svg
+              id="share_icon"
+              viewBox="0 0 950.8571428571428 1024"
+              class="sharebnt-icon"
+            >
+              <path
+                d="M832 694.857c0-14.857-5.714-28.571-16-38.857l-118.857-118.857c-10.286-10.286-24.571-16-38.857-16-16.571 0-29.714 6.286-41.143 18.286 18.857 18.857 41.143 34.857 41.143 64 0 30.286-24.571 54.857-54.857 54.857-29.143 0-45.143-22.286-64-41.143-12 11.429-18.857 24.571-18.857 41.714 0 14.286 5.714 28.571 16 38.857l117.714 118.286c10.286 10.286 24.571 15.429 38.857 15.429s28.571-5.143 38.857-14.857l84-83.429c10.286-10.286 16-24 16-38.286zM430.286 292c0-14.286-5.714-28.571-16-38.857l-117.714-118.286c-10.286-10.286-24.571-16-38.857-16s-28.571 5.714-38.857 15.429l-84 83.429c-10.286 10.286-16 24-16 38.286 0 14.857 5.714 28.571 16 38.857l118.857 118.857c10.286 10.286 24.571 15.429 38.857 15.429 16.571 0 29.714-5.714 41.143-17.714-18.857-18.857-41.143-34.857-41.143-64 0-30.286 24.571-54.857 54.857-54.857 29.143 0 45.143 22.286 64 41.143 12-11.429 18.857-24.571 18.857-41.714zM941.714 694.857c0 43.429-17.714 85.714-48.571 116l-84 83.429c-30.857 30.857-72.571 47.429-116 47.429-44 0-85.714-17.143-116.571-48.571l-117.714-118.286c-30.857-30.857-47.429-72.571-47.429-116 0-45.143 18.286-88 50.286-119.429l-50.286-50.286c-31.429 32-73.714 50.286-118.857 50.286-43.429 0-85.714-17.143-116.571-48l-118.857-118.857c-31.429-31.429-48-72.571-48-116.571 0-43.429 17.714-85.714 48.571-116l84-83.429c30.857-30.857 72.571-47.429 116-47.429 44 0 85.714 17.143 116.571 48.571l117.714 118.286c30.857 30.857 47.429 72.571 47.429 116 0 45.143-18.286 88-50.286 119.429l50.286 50.286c31.429-32 73.714-50.286 118.857-50.286 43.429 0 85.714 17.143 116.571 48l118.857 118.857c31.429 31.429 48 72.571 48 116.571z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="comparison-page-container1">
+          <div class="profile-container profile-root-class-name">
+            <div id="profile_banner_container" class="profile-banner">
+              <div
+                id="profile_banner"
+                class="banner-container banner-root-class-name"
+              >
+                <div id="banner_x_button" class="banner-container1 button">
+                  <span id="banner_x_text"><span>X</span></span>
+                </div>
+                <div id="banner_iconname_container" class="banner-container2">
+                  <div id="banner_picture_container" class="banner-picture">
+                    <img
+                      id="banner_profile_icon"
+                      alt="image"
+                      src="image"
+                      class="banner-image"
+                    />
+                  </div>
+                  <div id="banner_username_container" class="banner-username">
+                    <span id="banner_username_text" class="banner-text1">
+                      <span>Username</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="profile_tags_container" class="profile-tags">
+              <div
+                id="profile_taglist"
+                class="taglist-container taglist-root-class-name"
+              >
+                <div id="taglist_tag1_container" class="taglist-tag1">
+                  <span id="taglist_tag1_text" class="taglist-tag1text">
+                    <span>tag</span>
+                  </span>
+                </div>
+                <div id="taglist_tag2_container" class="taglist-tag2">
+                  <span id="taglist_tag2_text" class="taglist-tag2text">
+                    <span>tag</span>
+                  </span>
+                </div>
+                <div id="taglist_tag3_container" class="taglist-tag3">
+                  <span id="taglist_tag3_text" class="taglist-tag3text">
+                    <span>tag</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div id="profile_ranks_container" class="profile-ranks">
+              <div
+                class="rank-carousel-container rank-carousel-root-class-name"
+              >
+                <div
+                  id="rank_left_button"
+                  class="rank-carousel-left-button button"
+                >
+                  <span id="rank_left_button_text"><span>&lt;</span></span>
+                </div>
+                <div class="rank-carousel-ranked-contents"></div>
+                <div
+                  id="rank_right_button"
+                  class="rank-carousel-left-button1 button"
+                >
+                  <span id="rank_right_button_text"><span>&gt;</span></span>
+                </div>
+              </div>
+            </div>
+            <div id="profile_role_container" class="profile-container1">
+              <div
+                id="profile_rolelist"
+                class="role-list-container role-list-root-class-name"
+              >
+                <img
+                  id="top_icon"
+                  alt="image"
+                  src="https://play.teleporthq.io/static/svg/default-img.svg"
+                  class="role-list-image"
+                />
+                <img
+                  id="jg_icon"
+                  alt="image"
+                  src="https://play.teleporthq.io/static/svg/default-img.svg"
+                  class="role-list-image1"
+                />
+                <img
+                  id="mid_icon"
+                  alt="image"
+                  src="https://play.teleporthq.io/static/svg/default-img.svg"
+                  class="role-list-image2"
+                />
+                <img
+                  id="adc_icon"
+                  alt="image"
+                  src="https://play.teleporthq.io/static/svg/default-img.svg"
+                  class="role-list-image3"
+                />
+                <img
+                  id="sup_icon"
+                  alt="image"
+                  src="https://play.teleporthq.io/static/svg/default-img.svg"
+                  class="role-list-image4"
+                />
+              </div>
+            </div>
+            <div id="profile_champions_container" class="profile-container2">
+              <div
+                class="most-played-champs-container most-played-champs-root-class-name"
+              >
+                <div
+                  id="champs_title_container"
+                  class="most-played-champs-title"
+                >
+                  <span id="mostplayedChamps_text">
+                    <span>Most Played Champions</span>
+                  </span>
+                </div>
+                <div
+                  id="champs_1_container"
+                  class="most-played-champs-container01"
+                >
+                  <div
+                    id="champ1_WRandgames_container"
+                    class="most-played-champs-container02"
+                  >
+                    <div
+                      id="champ1_WR_container"
+                      class="most-played-champs-container03"
+                    >
+                      <span
+                        id="champ1_WR_text"
+                        class="most-played-champs-text01"
+                      >
+                        <span>_ %</span>
+                      </span>
+                    </div>
+                    <div
+                      id="champ1_totalgames_container"
+                      class="most-played-champs-container04"
+                    >
+                      <span
+                        id="champ1_totalgames_text"
+                        class="most-played-champs-text02"
+                      >
+                        <span>_ played</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    id="champ1_champIconandName_container"
+                    class="most-played-champs-container05"
+                  >
+                    <div
+                      id="champ1_icon"
+                      class="most-played-champs-container06"
+                    ></div>
+                    <div
+                      id="champ1_charactername_container"
+                      class="most-played-champs-container07"
+                    >
+                      <span
+                        id="champ1_charactername_text"
+                        class="most-played-champs-text03"
+                      >
+                        <span>champ_name</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    id="champ1_KDAstats_container"
+                    class="most-played-champs-container08"
+                  >
+                    <div
+                      id="champ1_KDA_container"
+                      class="most-played-champs-container09"
+                    >
+                      <span
+                        id="champ1_KDA_text"
+                        class="most-played-champs-text04"
+                      >
+                        <span>_ KDA</span>
+                      </span>
+                    </div>
+                    <div
+                      id="champ1_fullKDA_container"
+                      class="most-played-champs-container10"
+                    >
+                      <span
+                        id="champ1_fullKDA_text"
+                        class="most-played-champs-text05"
+                      >
+                        <span>_ / _ / _</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="champs_1_container"
+                  class="most-played-champs-container11"
+                >
+                  <div
+                    id="champ2_WRandgames_container"
+                    class="most-played-champs-container12"
+                  >
+                    <div
+                      id="champ2_WR_container"
+                      class="most-played-champs-container13"
+                    >
+                      <span
+                        id="champ2_WR_text"
+                        class="most-played-champs-text06"
+                      >
+                        <span>_ %</span>
+                      </span>
+                    </div>
+                    <div
+                      id="champ2_totalgames_container"
+                      class="most-played-champs-container14"
+                    >
+                      <span
+                        id="champ2_totalgames_text"
+                        class="most-played-champs-text07"
+                      >
+                        <span>_ played</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    id="champ2_champIconandName_container"
+                    class="most-played-champs-container15"
+                  >
+                    <div
+                      id="champ2_icon"
+                      class="most-played-champs-container16"
+                    ></div>
+                    <div
+                      id="champ2_charactername_container"
+                      class="most-played-champs-container17"
+                    >
+                      <span
+                        id="champ2_charactername_text"
+                        class="most-played-champs-text08"
+                      >
+                        <span>champ_name</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    id="champ2_KDAstats_container"
+                    class="most-played-champs-container18"
+                  >
+                    <div
+                      id="champ2_KDA_container"
+                      class="most-played-champs-container19"
+                    >
+                      <span
+                        id="champ2_KDA_text"
+                        class="most-played-champs-text09"
+                      >
+                        <span>_ KDA</span>
+                      </span>
+                    </div>
+                    <div
+                      id="champ2_fullKDA_container"
+                      class="most-played-champs-container20"
+                    >
+                      <span
+                        id="champ2_fullKDA_text"
+                        class="most-played-champs-text10"
+                      >
+                        <span>_ / _ / _</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="champs_3_container"
+                  class="most-played-champs-container21"
+                >
+                  <div
+                    id="champ3_WRandgames_container"
+                    class="most-played-champs-container22"
+                  >
+                    <div
+                      id="champ3_WR_container"
+                      class="most-played-champs-container23"
+                    >
+                      <span
+                        id="champ3_WR_text"
+                        class="most-played-champs-text11"
+                      >
+                        <span>_ %</span>
+                      </span>
+                    </div>
+                    <div
+                      id="champ3_totalgames_container"
+                      class="most-played-champs-container24"
+                    >
+                      <span
+                        id="champ3_totalgames_text"
+                        class="most-played-champs-text12"
+                      >
+                        <span>_ played</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    id="champ3_champIconandName_container"
+                    class="most-played-champs-container25"
+                  >
+                    <div
+                      id="champ3_icon"
+                      class="most-played-champs-container26"
+                    ></div>
+                    <div
+                      id="champ3_charactername_container"
+                      class="most-played-champs-container27"
+                    >
+                      <span
+                        id="champ3_charactername_text"
+                        class="most-played-champs-text13"
+                      >
+                        <span>champ_name</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    id="champ3_KDAstats_container"
+                    class="most-played-champs-container28"
+                  >
+                    <div
+                      id="champ3_KDA_container"
+                      class="most-played-champs-container29"
+                    >
+                      <span
+                        id="champ3_KDA_text"
+                        class="most-played-champs-text14"
+                      >
+                        <span>_ KDA</span>
+                      </span>
+                    </div>
+                    <div
+                      id="champ3_fullKDA_container"
+                      class="most-played-champs-container30"
+                    >
+                      <span
+                        id="champ3_fullKDA_text"
+                        class="most-played-champs-text15"
+                      >
+                        <span>_ / _ / _</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              id="profile_recentplayedwith_container"
+              class="profile-container3"
+            >
+              <div
+                class="recenty-played-with-container recenty-played-with-root-class-name"
+              >
+                <div id="rpw_title_container" class="recenty-played-with-title">
+                  <span id="rpw_text"><span>Recently Played With:</span></span>
+                </div>
+                <div class="recenty-played-with-contents">
+                  <div
+                    id="rpw_left_button"
+                    class="recenty-played-with-left-button button"
+                  >
+                    <span id="rpw_left_button_text"><span>&lt;</span></span>
+                  </div>
+                  <div
+                    id="rpw_users_container"
+                    class="recenty-played-with-container01"
+                  >
+                    <div
+                      id="rpw_user1_container"
+                      class="recenty-played-with-container02"
+                    >
+                      <div
+                        id="rpw_user1_name_container"
+                        class="recenty-played-with-container03"
+                      >
+                        <span id="rpw_user1_name_text"><span>Tyv</span></span>
+                      </div>
+                      <div
+                        id="rpw_user1_wr_container"
+                        class="recenty-played-with-container04"
+                      >
+                        <span
+                          id="rpw_user1_wr_text"
+                          class="recenty-played-with-text3"
+                        >
+                          <span>_ %</span>
+                        </span>
+                      </div>
+                      <div
+                        id="rpw_user1_numgames_container"
+                        class="recenty-played-with-container05"
+                      >
+                        <span
+                          id="rpw_user1_numgames_text"
+                          class="recenty-played-with-text4"
+                        >
+                          <span>_ games</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      id="rpw_user2_container"
+                      class="recenty-played-with-container06"
+                    >
+                      <div
+                        id="rpw_user2_name_container"
+                        class="recenty-played-with-container07"
+                      >
+                        <span id="rpw_user2_name_text"><span>Tyv</span></span>
+                      </div>
+                      <div
+                        id="rpw_user2_wr_container"
+                        class="recenty-played-with-container08"
+                      >
+                        <span
+                          id="rpw_user2_wr_text"
+                          class="recenty-played-with-text6"
+                        >
+                          <span>_ %</span>
+                        </span>
+                      </div>
+                      <div
+                        id="rpw_user2_numgames_container"
+                        class="recenty-played-with-container09"
+                      >
+                        <span
+                          id="rpw_user2_numgames_text"
+                          class="recenty-played-with-text7"
+                        >
+                          <span>_ games</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="rpw_right_button"
+                    class="recenty-played-with-left-button1 button"
+                  >
+                    <span id="rpw_right_button_text"><span>&gt;</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="profile-placeholder-container profile-placeholder-root-class-name"
+          >
+            <div
+              id="addPlayer_btn"
+              class="profile-placeholder-container1 button"
+            >
+              <svg
+                id="add_player_btn_icon"
+                viewBox="0 0 1024 1024"
+                class="profile-placeholder-icon"
+              >
+                <path
+                  d="M992 384h-352v-352c0-17.672-14.328-32-32-32h-192c-17.672 0-32 14.328-32 32v352h-352c-17.672 0-32 14.328-32 32v192c0 17.672 14.328 32 32 32h352v352c0 17.672 14.328 32 32 32h192c17.672 0 32-14.328 32-32v-352h352c17.672 0 32-14.328 32-32v-192c0-17.672-14.328-32-32-32z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="comparison-page-footer"></div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    <script>
+      window.onload = () => {
+        const runAllScripts = () => {
+          initializeAllSliders();
+        };
+
+        const listenForUrlChanges = () => {
+          let url = location.href;
+          document.body.addEventListener(
+            "click",
+            () => {
+              requestAnimationFrame(() => {
+                if (url !== location.href) {
+                  runAllScripts();
+                  url = location.href;
+                }
+              });
+            },
+            true
+          );
+        };
+
+        const initializeAllSliders = () => {
+          const allSliders = document.querySelectorAll('[data-type="slider"]');
+          allSliders.forEach((carrousel) => {
+            initializeSlider(carrousel);
+          });
+        };
+
+        const initializeSlider = (carrousel) => {
+          let currentSlide = 0;
+
+          const slides = carrousel.querySelectorAll('[data-type="slide"]');
+          const nextSlideBtns = carrousel.querySelectorAll(
+            '[data-action="nextSlide"]'
+          );
+          const previousSlideBtns = carrousel.querySelectorAll(
+            '[data-action="previousSlide"]'
+          );
+
+          const changeSlide = (slideIndex, action) => {
+            currentSlide = slideIndex;
+
+            switch (action) {
+              case "next":
+                slideIndex === slides.length - 1
+                  ? (currentSlide = 0)
+                  : currentSlide++;
+                break;
+              case "previous":
+                slideIndex === 0
+                  ? (currentSlide = slides.length - 1)
+                  : currentSlide--;
+            }
+
+            carrousel.style.transform = `translateX(${-100 * currentSlide}%)`;
+          };
+
+          previousSlideBtns.forEach((btn) => {
+            btn.addEventListener("click", () =>
+              changeSlide(currentSlide, "previous")
+            );
+          });
+
+          nextSlideBtns.forEach((btn) => {
+            btn.addEventListener("click", () =>
+              changeSlide(currentSlide, "next")
+            );
+          });
+        };
+
+        runAllScripts();
+      };
+    </script>
+  </body>
+</html>

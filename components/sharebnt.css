@@ -1,0 +1,29 @@
+.sharebnt-container {
+  width: 165px;
+  height: 60px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: 0px;
+  border-color: var(--dl-color-grays-white100);
+  border-width: 1px;
+  padding-left: 0px;
+  border-radius: 30px;
+  padding-right: 0px;
+  flex-direction: column;
+  padding-bottom: 0px;
+  justify-content: center;
+  background-color: #007EE7;
+}
+.sharebnt-container:hover {
+  height: 60px;
+  background: 1F4260;
+  background-color: #09416f;
+}
+.sharebnt-icon {
+  fill: var(--dl-color-grays-white100);
+  width: 37px;
+  height: 39px;
+}
+

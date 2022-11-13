@@ -1,0 +1,326 @@
+.most-played-champs-container {
+  width: 275px;
+  height: 310px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+.most-played-champs-title {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+  margin-bottom: 4px;
+  justify-content: center;
+  background-color: var(--dl-color-grays-white100);
+}
+.most-played-champs-container01 {
+  flex: 0 0 auto;
+  width: 95%;
+  height: 80px;
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+  margin-bottom: 4px;
+  background-size: cover;
+  justify-content: center;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+.most-played-champs-container02 {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.most-played-champs-container03 {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.most-played-champs-text01 {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+}
+.most-played-champs-container04 {
+  width: 100%;
+  height: 26px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.most-played-champs-text02 {
+  font-size: 12px;
+}
+.most-played-champs-container05 {
+  flex: 0 0 auto;
+  width: 63px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.most-played-champs-container06 {
+  width: 64px;
+  height: 61px;
+  display: flex;
+  align-items: flex-start;
+  border-color: var(--dl-color-grays-dark100);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-round);
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+.most-played-champs-container07 {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.most-played-champs-text03 {
+  font-size: 12px;
+}
+.most-played-champs-container08 {
+  flex: 0 0 auto;
+  width: 135px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.most-played-champs-container09 {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.most-played-champs-text04 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.most-played-champs-container10 {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+}
+.most-played-champs-text05 {
+  font-size: 14px;
+}
+.most-played-champs-container11 {
+  flex: 0 0 auto;
+  width: 95%;
+  height: 80px;
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+  margin-bottom: 4px;
+  background-size: cover;
+  justify-content: center;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+.most-played-champs-container12 {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.most-played-champs-container13 {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.most-played-champs-text06 {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+}
+.most-played-champs-container14 {
+  width: 100%;
+  height: 26px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.most-played-champs-text07 {
+  font-size: 12px;
+}
+.most-played-champs-container15 {
+  flex: 0 0 auto;
+  width: 68px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.most-played-champs-container16 {
+  width: 64px;
+  height: 61px;
+  display: flex;
+  align-items: flex-start;
+  border-color: var(--dl-color-grays-dark100);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-round);
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+.most-played-champs-container17 {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.most-played-champs-text08 {
+  font-size: 12px;
+}
+.most-played-champs-container18 {
+  flex: 0 0 auto;
+  width: 135px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.most-played-champs-container19 {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.most-played-champs-text09 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.most-played-champs-container20 {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+}
+.most-played-champs-text10 {
+  font-size: 14px;
+}
+.most-played-champs-container21 {
+  flex: 0 0 auto;
+  width: 95%;
+  height: 80px;
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+  margin-bottom: 4px;
+  background-size: cover;
+  justify-content: center;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+.most-played-champs-container22 {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.most-played-champs-container23 {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.most-played-champs-text11 {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+}
+.most-played-champs-container24 {
+  width: 100%;
+  height: 26px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.most-played-champs-text12 {
+  font-size: 12px;
+}
+.most-played-champs-container25 {
+  flex: 0 0 auto;
+  width: 63px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.most-played-champs-container26 {
+  width: 64px;
+  height: 61px;
+  display: flex;
+  align-items: flex-start;
+  border-color: var(--dl-color-grays-dark100);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-round);
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+.most-played-champs-container27 {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.most-played-champs-text13 {
+  font-size: 12px;
+}
+.most-played-champs-container28 {
+  flex: 0 0 auto;
+  width: 135px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.most-played-champs-container29 {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.most-played-champs-text14 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.most-played-champs-container30 {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+}
+.most-played-champs-text15 {
+  font-size: 14px;
+}
+

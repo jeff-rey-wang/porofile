@@ -1,0 +1,25 @@
+.porofile-home-btn-container {
+  width: 350px;
+  height: 100px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.porofile-home-btn-image {
+  width: 90px;
+  height: 90%;
+  object-fit: cover;
+  border-color: var(--dl-color-grays-white100);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-round);
+}
+.porofile-home-btn-text {
+  color: var(--dl-color-grays-white100);
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  margin-left: var(--dl-space-space-oneandhalfunits);
+}
+

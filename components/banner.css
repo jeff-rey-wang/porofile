@@ -1,0 +1,64 @@
+.banner-container {
+  width: 275px;
+  height: 80px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-radius8);
+  flex-direction: row;
+  background-size: cover;
+  background-image: url('https://play.teleporthq.io/static/svg/default-img.svg');
+}
+.banner-container1 {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-self: flex-start;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: 0px;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: solid;
+  border-width: 2px;
+  padding-left: 0px;
+  border-radius: var(--dl-radius-radius-round);
+  padding-right: 0px;
+  flex-direction: column;
+  padding-bottom: 0px;
+  justify-content: center;
+  background-color: #f70000;
+}
+.banner-container1:hover {
+  background: #a00303;
+}
+.banner-container2 {
+  width: 215px;
+  height: 80px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.banner-picture {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.banner-username {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-text1 {
+  color: var(--dl-color-grays-white80);
+}
+

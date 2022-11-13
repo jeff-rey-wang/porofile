@@ -1,0 +1,37 @@
+.role-list-container {
+  width: 275px;
+  height: 60px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: var(--dl-space-space-halfunit);
+  padding-right: var(--dl-space-space-halfunit);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.role-list-image {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+.role-list-image1 {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+.role-list-image2 {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+.role-list-image3 {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+.role-list-image4 {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+

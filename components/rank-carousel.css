@@ -1,0 +1,52 @@
+.rank-carousel-container {
+  width: 275px;
+  height: 130px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+}
+.rank-carousel-left-button {
+  width: 25px;
+  height: 106px;
+  display: flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  flex-direction: column;
+  padding-bottom: 0px;
+  justify-content: center;
+  background-color: rgba(156, 190, 198, 0.75);
+}
+.rank-carousel-left-button:hover {
+  background: grey;
+}
+.rank-carousel-ranked-contents {
+  flex: 0 0 auto;
+  width: 225px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.rank-carousel-left-button1 {
+  width: 25px;
+  height: 106px;
+  display: flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  flex-direction: column;
+  padding-bottom: 0px;
+  justify-content: center;
+  background-color: rgba(156, 190, 198, 0.75);
+}
+.rank-carousel-left-button1:hover {
+  background: grey;
+}
+

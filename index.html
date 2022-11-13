@@ -1,49 +1,418 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <title>Porofile</title>
+    <meta property="og:title" content="Porofile" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Lexend;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.1;
+        color: var(--dl-color-grays-dark100);
+        background-color: var(--dl-color-grays-white100);
+
+      }
+    </style>
     <link
-      href="https://fonts.googleapis.com/css?family=Mitr&display=swap"
-      rel="stylesheet"
+      rel="shortcut icon"
+      href="public/playground_assets/porofile_logo1.png"
+      type="icon/png"
+      sizes="32x32"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link href="./css/main.css" rel="stylesheet" />
-    <title>Document</title>
+    <style>
+      ::placeholder{
+      color: #63667066;
+      }
+    </style>
+    <style data-section-id="dropdown">
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="landing_page">
-    <span class="title">Porofile</span>
-      <div class="porofile_logo"></div>
-      <div class="search_card">
-        <div class="region_dropdown"></div>
-        <div class="username_input_box"><input class="username_input" placeholder="username..."></input></div>
-        <div class="add_player_container">
-          <div class="add_player_button">
-            <span class="plus_symbol">+</span>
-          </div>
-        </div>
-      </div>
-      <div class="added_players_container">
-        <div class="added_player_container">
-          <div class="added_player_region_container"><span class="added_player_region_text">NA</span></div>
-          <div class="added_player_username_container"><span class="added_player_username_text">Username</span></div>
-          <div class="added_player_trash_container">
-            <div class="added_player_trash_button"> 
+    <div>
+      <link href="./landing-page.css" rel="stylesheet" />
+
+      <div id="landing_page" class="landing-page-container">
+        <div class="landing-page-icon-and-title">
+          <div
+            id="title_section"
+            class="porofile-title-icon-container porofile-title-icon-root-class-name"
+          >
+            <div id="title_container" class="porofile-title-icon-container1">
+              <span id="title_text" class="porofile-title-icon-text">
+                <span>Porofile</span>
+              </span>
+              <img
+                id="logo"
+                alt="image"
+                src="/playground_assets/porofile_logo-300h.png"
+                class="porofile-title-icon-image"
+              />
             </div>
-           
           </div>
         </div>
-      </div>
-      <div class="view_profiles_button">
-        <div class="search_icon"></div>
-        <span class="view_profiles_text">View Profile(s)</span>
+        <div class="landing-page-user-search-container">
+          <div
+            id="search_user_section"
+            class="search-user-container search-user-root-class-name"
+          >
+            <div id="search_user_container" class="search-user-container1">
+              <div
+                data-thq="thq-dropdown"
+                class="search-user-dropdown list-item"
+              >
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="search-user-dropdown-toggle"
+                >
+                  <span class="search-user-text">Region</span>
+                  <div
+                    data-thq="thq-dropdown-arrow"
+                    class="search-user-dropdown-arrow"
+                  >
+                    <svg viewBox="0 0 1024 1024" class="search-user-icon">
+                      <path d="M426 726v-428l214 214z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="search-user-container2"></div>
+                <ul
+                  data-thq="thq-dropdown-list"
+                  class="search-user-dropdown-list"
+                >
+                  <li
+                    data-thq="thq-dropdown"
+                    class="search-user-dropdown1 list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="search-user-dropdown-toggle1"
+                    >
+                      <span class="search-user-text1">NA</span>
+                    </div>
+                  </li>
+                  <li
+                    data-thq="thq-dropdown"
+                    class="search-user-dropdown2 list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="search-user-dropdown-toggle2"
+                    >
+                      <span class="search-user-text2">EU</span>
+                    </div>
+                  </li>
+                  <li
+                    data-thq="thq-dropdown"
+                    class="search-user-dropdown3 list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="search-user-dropdown-toggle3"
+                    >
+                      <span class="search-user-text3">KO</span>
+                    </div>
+                  </li>
+                  <li
+                    data-thq="thq-dropdown"
+                    class="search-user-dropdown4 list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="search-user-dropdown-toggle4"
+                    >
+                      <span class="search-user-text4">
+                        <span>BR</span>
+                        <br />
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    data-thq="thq-dropdown"
+                    class="search-user-dropdown5 list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="search-user-dropdown-toggle5"
+                    >
+                      <span class="search-user-text7">CH</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <input
+                type="text"
+                id="username_input"
+                placeholder="Username..."
+                class="search-user-textinput input"
+              />
+              <button
+                id="add_button"
+                type="button"
+                class="search-user-button button"
+              >
+                <span>+</span>
+              </button>
+            </div>
+            <div class="search-user-btn-group"></div>
+          </div>
+        </div>
+        <div class="landing-page-added-players-container">
+          <div
+            id="added_user_section"
+            class="added-user-container added-user-root-class-name"
+          >
+            <div class="added-user-container1">
+              <div id="region_container" class="added-user-region-container">
+                <span id="region_text"><span>NA</span></span>
+              </div>
+              <div
+                id="username_container"
+                class="added-user-username-container"
+              >
+                <span id="username_text"><span>Username</span></span>
+              </div>
+              <div id="trash_button" class="added-user-container2 button">
+                <svg
+                  id="trash_icon"
+                  viewBox="0 0 804.5714285714286 1024"
+                  class="added-user-icon"
+                >
+                  <path
+                    d="M292.571 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM438.857 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM585.143 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM658.286 834.286v-541.714h-512v541.714c0 27.429 15.429 43.429 18.286 43.429h475.429c2.857 0 18.286-16 18.286-43.429zM274.286 219.429h256l-27.429-66.857c-1.714-2.286-6.857-5.714-9.714-6.286h-181.143c-3.429 0.571-8 4-9.714 6.286zM804.571 237.714v36.571c0 10.286-8 18.286-18.286 18.286h-54.857v541.714c0 62.857-41.143 116.571-91.429 116.571h-475.429c-50.286 0-91.429-51.429-91.429-114.286v-544h-54.857c-10.286 0-18.286-8-18.286-18.286v-36.571c0-10.286 8-18.286 18.286-18.286h176.571l40-95.429c11.429-28 45.714-50.857 76-50.857h182.857c30.286 0 64.571 22.857 76 50.857l40 95.429h176.571c10.286 0 18.286 8 18.286 18.286z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            id="added_user_section"
+            class="added-user-container added-user-root-class-name1"
+          >
+            <div class="added-user-container1">
+              <div id="region_container" class="added-user-region-container">
+                <span id="region_text"><span>NA</span></span>
+              </div>
+              <div
+                id="username_container"
+                class="added-user-username-container"
+              >
+                <span id="username_text"><span>Username</span></span>
+              </div>
+              <div id="trash_button" class="added-user-container2 button">
+                <svg
+                  id="trash_icon"
+                  viewBox="0 0 804.5714285714286 1024"
+                  class="added-user-icon"
+                >
+                  <path
+                    d="M292.571 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM438.857 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM585.143 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM658.286 834.286v-541.714h-512v541.714c0 27.429 15.429 43.429 18.286 43.429h475.429c2.857 0 18.286-16 18.286-43.429zM274.286 219.429h256l-27.429-66.857c-1.714-2.286-6.857-5.714-9.714-6.286h-181.143c-3.429 0.571-8 4-9.714 6.286zM804.571 237.714v36.571c0 10.286-8 18.286-18.286 18.286h-54.857v541.714c0 62.857-41.143 116.571-91.429 116.571h-475.429c-50.286 0-91.429-51.429-91.429-114.286v-544h-54.857c-10.286 0-18.286-8-18.286-18.286v-36.571c0-10.286 8-18.286 18.286-18.286h176.571l40-95.429c11.429-28 45.714-50.857 76-50.857h182.857c30.286 0 64.571 22.857 76 50.857l40 95.429h176.571c10.286 0 18.286 8 18.286 18.286z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            id="added_user_section"
+            class="added-user-container added-user-root-class-name2"
+          >
+            <div class="added-user-container1">
+              <div id="region_container" class="added-user-region-container">
+                <span id="region_text"><span>NA</span></span>
+              </div>
+              <div
+                id="username_container"
+                class="added-user-username-container"
+              >
+                <span id="username_text"><span>Username</span></span>
+              </div>
+              <div id="trash_button" class="added-user-container2 button">
+                <svg
+                  id="trash_icon"
+                  viewBox="0 0 804.5714285714286 1024"
+                  class="added-user-icon"
+                >
+                  <path
+                    d="M292.571 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM438.857 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM585.143 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM658.286 834.286v-541.714h-512v541.714c0 27.429 15.429 43.429 18.286 43.429h475.429c2.857 0 18.286-16 18.286-43.429zM274.286 219.429h256l-27.429-66.857c-1.714-2.286-6.857-5.714-9.714-6.286h-181.143c-3.429 0.571-8 4-9.714 6.286zM804.571 237.714v36.571c0 10.286-8 18.286-18.286 18.286h-54.857v541.714c0 62.857-41.143 116.571-91.429 116.571h-475.429c-50.286 0-91.429-51.429-91.429-114.286v-544h-54.857c-10.286 0-18.286-8-18.286-18.286v-36.571c0-10.286 8-18.286 18.286-18.286h176.571l40-95.429c11.429-28 45.714-50.857 76-50.857h182.857c30.286 0 64.571 22.857 76 50.857l40 95.429h176.571c10.286 0 18.286 8 18.286 18.286z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            id="added_user_section"
+            class="added-user-container added-user-root-class-name3"
+          >
+            <div class="added-user-container1">
+              <div id="region_container" class="added-user-region-container">
+                <span id="region_text"><span>NA</span></span>
+              </div>
+              <div
+                id="username_container"
+                class="added-user-username-container"
+              >
+                <span id="username_text"><span>Username</span></span>
+              </div>
+              <div id="trash_button" class="added-user-container2 button">
+                <svg
+                  id="trash_icon"
+                  viewBox="0 0 804.5714285714286 1024"
+                  class="added-user-icon"
+                >
+                  <path
+                    d="M292.571 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM438.857 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM585.143 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM658.286 834.286v-541.714h-512v541.714c0 27.429 15.429 43.429 18.286 43.429h475.429c2.857 0 18.286-16 18.286-43.429zM274.286 219.429h256l-27.429-66.857c-1.714-2.286-6.857-5.714-9.714-6.286h-181.143c-3.429 0.571-8 4-9.714 6.286zM804.571 237.714v36.571c0 10.286-8 18.286-18.286 18.286h-54.857v541.714c0 62.857-41.143 116.571-91.429 116.571h-475.429c-50.286 0-91.429-51.429-91.429-114.286v-544h-54.857c-10.286 0-18.286-8-18.286-18.286v-36.571c0-10.286 8-18.286 18.286-18.286h176.571l40-95.429c11.429-28 45.714-50.857 76-50.857h182.857c30.286 0 64.571 22.857 76 50.857l40 95.429h176.571c10.286 0 18.286 8 18.286 18.286z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            id="added_user_section"
+            class="added-user-container added-user-root-class-name4"
+          >
+            <div class="added-user-container1">
+              <div id="region_container" class="added-user-region-container">
+                <span id="region_text"><span>NA</span></span>
+              </div>
+              <div
+                id="username_container"
+                class="added-user-username-container"
+              >
+                <span id="username_text"><span>Username</span></span>
+              </div>
+              <div id="trash_button" class="added-user-container2 button">
+                <svg
+                  id="trash_icon"
+                  viewBox="0 0 804.5714285714286 1024"
+                  class="added-user-icon"
+                >
+                  <path
+                    d="M292.571 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM438.857 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM585.143 420.571v329.143c0 10.286-8 18.286-18.286 18.286h-36.571c-10.286 0-18.286-8-18.286-18.286v-329.143c0-10.286 8-18.286 18.286-18.286h36.571c10.286 0 18.286 8 18.286 18.286zM658.286 834.286v-541.714h-512v541.714c0 27.429 15.429 43.429 18.286 43.429h475.429c2.857 0 18.286-16 18.286-43.429zM274.286 219.429h256l-27.429-66.857c-1.714-2.286-6.857-5.714-9.714-6.286h-181.143c-3.429 0.571-8 4-9.714 6.286zM804.571 237.714v36.571c0 10.286-8 18.286-18.286 18.286h-54.857v541.714c0 62.857-41.143 116.571-91.429 116.571h-475.429c-50.286 0-91.429-51.429-91.429-114.286v-544h-54.857c-10.286 0-18.286-8-18.286-18.286v-36.571c0-10.286 8-18.286 18.286-18.286h176.571l40-95.429c11.429-28 45.714-50.857 76-50.857h182.857c30.286 0 64.571 22.857 76 50.857l40 95.429h176.571c10.286 0 18.286 8 18.286 18.286z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="landing-page-search-button-footer">
+          <div class="search-button-container search-button-root-class-name">
+            <div class="search-button-container1 button">
+              <svg viewBox="0 0 1024 1024" class="search-button-icon">
+                <path
+                  d="M992.262 871.396l-242.552-206.294c-25.074-22.566-51.89-32.926-73.552-31.926 57.256-67.068 91.842-154.078 91.842-249.176 0-212.078-171.922-384-384-384-212.076 0-384 171.922-384 384s171.922 384 384 384c95.098 0 182.108-34.586 249.176-91.844-1 21.662 9.36 48.478 31.926 73.552l206.294 242.552c35.322 39.246 93.022 42.554 128.22 7.356s31.892-92.898-7.354-128.22zM384 640c-141.384 0-256-114.616-256-256s114.616-256 256-256 256 114.616 256 256-114.614 256-256 256z"
+                ></path>
+              </svg>
+              <div class="search-button-container2">
+                <span class="search-button-text">
+                  <span>View Profile(s)</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    <script>
+      window.onload = () => {
+        const runAllScripts = () => {
+          initializeAllSliders();
+        };
+
+        const listenForUrlChanges = () => {
+          let url = location.href;
+          document.body.addEventListener(
+            "click",
+            () => {
+              requestAnimationFrame(() => {
+                if (url !== location.href) {
+                  runAllScripts();
+                  url = location.href;
+                }
+              });
+            },
+            true
+          );
+        };
+
+        const initializeAllSliders = () => {
+          const allSliders = document.querySelectorAll('[data-type="slider"]');
+          allSliders.forEach((carrousel) => {
+            initializeSlider(carrousel);
+          });
+        };
+
+        const initializeSlider = (carrousel) => {
+          let currentSlide = 0;
+
+          const slides = carrousel.querySelectorAll('[data-type="slide"]');
+          const nextSlideBtns = carrousel.querySelectorAll(
+            '[data-action="nextSlide"]'
+          );
+          const previousSlideBtns = carrousel.querySelectorAll(
+            '[data-action="previousSlide"]'
+          );
+
+          const changeSlide = (slideIndex, action) => {
+            currentSlide = slideIndex;
+
+            switch (action) {
+              case "next":
+                slideIndex === slides.length - 1
+                  ? (currentSlide = 0)
+                  : currentSlide++;
+                break;
+              case "previous":
+                slideIndex === 0
+                  ? (currentSlide = slides.length - 1)
+                  : currentSlide--;
+            }
+
+            carrousel.style.transform = `translateX(${-100 * currentSlide}%)`;
+          };
+
+          previousSlideBtns.forEach((btn) => {
+            btn.addEventListener("click", () =>
+              changeSlide(currentSlide, "previous")
+            );
+          });
+
+          nextSlideBtns.forEach((btn) => {
+            btn.addEventListener("click", () =>
+              changeSlide(currentSlide, "next")
+            );
+          });
+        };
+
+        runAllScripts();
+      };
+    </script>
   </body>
 </html>

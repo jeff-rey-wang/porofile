@@ -7,7 +7,7 @@ body {
 .landing_page {
   width: 100%;
   height: 1080px;
-  background: rgba(17, 75, 95, 1);
+  background: #114b5f;
   opacity: 1;
   position: relative;
   top: 0px;
@@ -226,7 +226,7 @@ body {
 .add_player_button {
   width: 40px;
   height: 40px;
-  background: rgba(136, 212, 152, 1);
+  background: #88d498;
   opacity: 1;
   position: relative;
   top: 0px;
