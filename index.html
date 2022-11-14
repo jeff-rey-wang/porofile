@@ -54,34 +54,9 @@
         }
     </style>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./search.js"></script>
-    <style>
-      /* css for autocomplete */
-      .autocomplete-items {
-        position: absolute;
-        border-bottom: none;
-        border-top: none;
-        z-index: 99;
-        top: 70.5%;
-        left: 24.75%;
-        right: 0;
-        width: 348px;
-      }
-      .autocomplete-items div {
-        padding: 10px;
-        cursor: pointer;
-        background-color: #eee;
-        border-bottom: 1px solid #d4d4d4;
-        border-radius: 4px;
-      }
-      .autocomplete-items div:hover {
-        background-color: #e6e6e6;
-      }
-      .autocomplete-active {
-        background-color: DodgerBlue !important;
-        color: #ffffff;
-      }
-    </style>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="assets/css/autocomplete.css"/>
   </head>
   <body>
     <div>
@@ -100,7 +75,7 @@
               <img
                 id="logo"
                 alt="image"
-                src="/playground_assets/porofile_logo-300h.png"
+                src="public/playground_assets/porofile_logo-300h.png"
                 class="porofile-title-icon-image"
               />
             </div>

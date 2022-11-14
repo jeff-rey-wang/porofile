@@ -59,7 +59,6 @@
   align-self: center;
   border-color: var(--dl-color-grays-dark100);
   border-width: 1px;
-  margin-right: 20px;
   border-radius: var(--dl-radius-radius-radius8);
   background-color: var(--dl-color-grays-white100);
 }
