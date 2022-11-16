@@ -1,4 +1,4 @@
-const appendProfile = (username, region) => {
+const appendProfile = (username) => {
 
     console.log(username)
     // fill in content
