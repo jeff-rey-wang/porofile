@@ -161,4 +161,9 @@ $(document).ready(function() {
         section.remove();
         addedPlayers--;
     });
+
+    // view profiles
+    $(".search-button-container2").click(function() {
+        window.location.href = "comparison-page.html";
+    });
 })
