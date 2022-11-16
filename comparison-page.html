@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
     <title>ComparisonPage - Porofile</title>
     <meta property="og:title" content="ComparisonPage - Porofile" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -104,7 +105,7 @@
             }
         </script>
         </div>
-        <div class="comparison-page-container1">
+        <div id = "profile_container" class="comparison-page-container1">
           <div id = "a_user_profile" class="profile-container profile-root-class-name">
             <div id="profile_banner_container" class="profile-banner">
               <div
@@ -569,7 +570,7 @@
             </div>
           </div>
           <div
-            class="profile-placeholder-container profile-placeholder-root-class-name"
+            id="profile_placeholder" class="profile-placeholder-container profile-placeholder-root-class-name"
           >
           <div id="overlay" class="overlay"></div>
             <div
@@ -746,6 +747,9 @@
       </div>
     </div>
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    <script src="assets/js/comparison-page.js"></script>
+    <script src="assets/js/appendProfile.js"></script>
+    
     <script>
       window.onload = () => {
         const runAllScripts = () => {
