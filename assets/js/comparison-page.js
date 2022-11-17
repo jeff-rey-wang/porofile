@@ -9,7 +9,7 @@ function populate_col(username) {
     //seraphine 34 - 50%wr - 1.5/6.6/8.7 - 1.55kda
     //jinx 27 - 44%wr - 3.4/7.0/6.9 - 1.47kda
     //ashe 22 - 45%wr - 1.0/6.5/9.7 - 1.63kda
-    // Tyv 56wr 18games, Snow 50wr, 6games
+    // Tyv 56wr 18games, Boxerme 50wr, 6games
   } else if (username == "qotato") {
     //G3 solo, no flex
     //Midgame Master - green
@@ -19,8 +19,16 @@ function populate_col(username) {
     //teemo 15 - 53%wr - 6.3/5.7/5.9 - 2.1kda
     //samira 11 - 36%wr - 8.3/5.1/5.1 - 2.6kda
     //fiora 4 - 75%wr - 4.0/4.3/3.5 - 1.8kda
+    //Boxerme 70wr 10 games, ElegantDisaster 66wr 6 games
   } else if (username == "Boxerme") {
+    // no solo, B1 flex
+    //Late bloomer - green
     //
+    //mid, top
+    //galio 10-40%wr - 4.5/7.0/8.2 - 1.8kda
+    //shen 8 -75%wr - 4.0/3.0/8.4 - 4.1kda
+    //xerath 8 - 25%wr - 8.9/6.0/9.8 - 3.1kda
+    //jasminebrew 53wr 17 games, Tyv 55wr, 13 games
   } else if (username == "ElegantDisaster") {
     // G2 solo, no flex
     //Early Warder - green
@@ -30,7 +38,7 @@ function populate_col(username) {
     // zyra 61 - 62wr 3.3/6.3/11.5 - 2.33kda
     // yuumi 52 - 56wr 2.4/4.5/17.0 - 4.3kda
     // MF 39 - 51wr 4.8/5.9/8.2 - 2.19kda
-    // Akuma Tan 50wr 12 game, SereneCrow 50wr 4 game
+    // qotato 50wr 12 game, Tyv 50wr 4 game
   } else if (username == "Tyv") {
     // D4 solo, G2 flex
     //Deadly Duelist - green
@@ -40,7 +48,8 @@ function populate_col(username) {
     // zed 193 - 64wr 9.6/4.8/5.2 - 3.1kda
     // sylas 77 - 58wr 8.1/7.3/6.9 - 1.9kda
     // zoe 73 - 50wr 6.8/4.4/7.6 - 3.25kda
-    // jasminebrew 43wr 7 game, shiba kun 50 wr 4 game
+    // jasminebrew 43wr 7 game, ElegantDisaster 50 wr 4 game
   } else {
+    //User not found scenario
   }
 }
