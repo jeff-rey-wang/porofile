@@ -1,4 +1,77 @@
 // populate content based on the searched username
+const Tags = {
+  Escapist: [
+    "Escapist",
+    rgba(71, 204, 66, 255),
+    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+  ],
+  MidgameMaster: [
+    "Midgame Master",
+    rgba(71, 204, 66, 255),
+    "This player averages 26.55 CS% in from 15 to 30 minutes, they really shine during the mid game.",
+  ],
+  LaneTyrant: [
+    "Lane Tyrant",
+    rgba(71, 204, 66, 255),
+    "Uh oh, this player averages 18.23 CS difference by 15 minutes! They often dominate the laning phase.",
+  ],
+  LateBloomer: [
+    "Late Bloomer",
+    rgba(71, 204, 66, 255),
+    "We detect you as a Late Bloomer due to the time it takes for you to make an impact on the game.",
+  ],
+  EarlyWarder: [
+    "Early Warder",
+    rgba(71, 204, 66, 255),
+    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+  ],
+  VisionFocused: [
+    "Vision Focused",
+    rgba(71, 204, 66, 255),
+    "This player averages 1.77 vision score per minute. They really prioritize placing and clearing wards.",
+  ],
+  SolidLaner: [
+    "Solid Laner",
+    rgba(71, 204, 66, 255),
+    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+  ],
+  DeadlyDuelist: [
+    "Deadly Duelist",
+    rgba(71, 204, 66, 255),
+    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+  ],
+  UltimatePredator: [
+    "Ultimate Predator",
+    rgba(71, 204, 66, 255),
+    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+  ],
+  Pacifist: [
+    "Pacfist",
+    rgba(238, 183, 12, 255),
+    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+  ],
+  HungryForBlood: [
+    "Hungry for Blood",
+    rgba(238, 183, 12, 255),
+    "This player has participated the First Blood of the match in 47.72% of their matches. Expect them to play aggressively and look for the first kill, even if it means dying themselves.",
+  ],
+  ReadyToRumble: [
+    "Ready to Rumble",
+    rgba(238, 183, 12, 255),
+    "This player has gotten their first kill within the first 5 minutes of their game in 82.97% of their matches. Expect them to join or make action happen early.",
+  ],
+  Visionless: [
+    "Visionless",
+    rgba(221, 38, 112, 255),
+    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+  ],
+  RiskBlind: [
+    "Risk Blind",
+    rgba(221, 38, 112, 255),
+    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+  ],
+};
+
 function populate_col(username) {
   if (username == "jasminebrew") {
     // no solo, B2 flex
@@ -23,7 +96,8 @@ function populate_col(username) {
   } else if (username == "Boxerme") {
     // no solo, B1 flex
     //Late bloomer - green
-    //
+    //Hungry for Blood - yellow
+    //Ready to Rumble - yellow
     //mid, top
     //galio 10-40%wr - 4.5/7.0/8.2 - 1.8kda
     //shen 8 -75%wr - 4.0/3.0/8.4 - 4.1kda
