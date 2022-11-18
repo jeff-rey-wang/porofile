@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>ComparisonPage - Porofile</title>
@@ -142,19 +142,62 @@
               <div
                 class="rank-carousel-container rank-carousel-root-class-name"
               >
-                <div
-                  id="rank_left_button"
-                  class="rank-carousel-left-button button"
-                >
-                  <span id="rank_left_button_text"><span>&lt;</span></span>
-                </div>
-                <div class="rank-carousel-ranked-contents"></div>
-                <div
-                  id="rank_right_button"
-                  class="rank-carousel-left-button1 button"
-                >
-                  <span id="rank_right_button_text"><span>&gt;</span></span>
-                </div>
+                  <div id="rank_left_button">
+                      <button type="button" 
+                              onclick="alert('You pressed the left button!')" 
+                              class="rank-carousel-left-button button">
+                          <span id="rank_left_button_text"><span>&lt;</span></span>
+                      </button>
+                  </div>
+                  
+                  <div class="rank-carousel-ranked-contents">
+                      <head>
+                          <style>
+                              {
+                                  box-sizing: border-box;
+                              }
+                              /* Set additional styling options for the columns*/
+                              .column {
+                                  float: left;
+                                  width: 50%;
+                                  text-align: center;
+                              }
+
+                              .row:after {
+                                  content: "";
+                                  display: table;
+                                  clear: both;
+                              }
+                          </style>
+                      </head>
+                      <div class="row">
+                          <div class="column" >
+                              Ranked Solo
+                              <img id="gold_icon"
+                                   alt="Gold Division Icon"
+                                   src="https://static.wikia.nocookie.net/leagueoflegends/images/8/8d/Season_2022_-_Gold.png/revision/latest?cb=20220105214225" 
+                                   width="1000" height="1000"
+                                   class="role-list-image" />
+                              Gold II
+                          </div>
+                          <div class="column">
+                              Ranked Flex
+                              <img id="unranked_icon"
+                                   alt="Unranked Icon"
+                                   src="https://static.wikia.nocookie.net/leagueoflegends/images/5/5e/Season_2019_-_Provisional.png/revision/latest?cb=20190908074433"
+                                   class="role-list-image" />
+                              Unranked
+                          </div>
+                      </div>
+                  </div>
+                
+                  <div id="rank_right_button"> 
+                      <button type = "button" 
+                              onclick = "alert('You pressed the right button!')"
+                              class = "rank-carousel-left-button1 button"
+                              <span id="rank_right_button_text"><span>&gt;</span></span>
+                      </button>
+                  </div>
               </div>
             </div>
             <div id="profile_role_container" class="profile-container1">
