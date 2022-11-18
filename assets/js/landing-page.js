@@ -126,10 +126,10 @@ $(document).ready(function() {
         // check if region is selected
         if ($(".search-user-text").text() == "Region") { alert("Please select a region"); return; }
         // check if username is selected
-        if ($("#username_input").val() == "") { alert("Please enter a valid username"); return; }
+        if ($(".username_input").val() == "") { alert("Please enter a valid username"); return; }
         if (!players.includes($("#username_input").val())) { 
             alert("Username not found\n\nFor purposes of this demo, please use any of the following:\n\t Tyv \n\t Boxerme \n\t jasminebrew \n\t qotato \n\t ElegantDisaster ");
-            $("#username_input").val("");
+            $(".username_input").val("");
             return; 
         }
         if (addedPlayers >= addLimit) { alert("Cannot add more than 5 players"); return; }
@@ -146,7 +146,7 @@ $(document).ready(function() {
                         id="username_container"
                         class="added-user-username-container"
                     >
-                        <span id="username_text"><span>`+$("#username_input").val()+`</span></span>
+                        <span class="username_text"><span>`+$("#username_input").val()+`</span></span>
                     </div>
                     <div id="trash_button" class="added-user-container2 button">
                         <svg
@@ -178,8 +178,16 @@ $(document).ready(function() {
 
     // view profiles
     // TODO: pass player names as queries
-    $(".search-button-container2").click(function() {
-        if (addedPlayers) window.location.href = "comparison-page.html?player=Tyv";
+    $(".search-button-container1").click(function() {
+        // queryString = "player1=name&player2=name2"
+        var queryString = "";
+        $(".username_text").each( (index,element) => {
+            queryString += "player" + index + "=" + $(element).children().text() + "&";
+        })
+        // remove last "&"
+        queryString = queryString.slice(0,-1);
+
+        if (addedPlayers) window.location.href = "comparison-page.html?" + queryString;
         else alert("Please add a player");
     });
 })

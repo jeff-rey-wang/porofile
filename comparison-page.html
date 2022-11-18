@@ -852,6 +852,16 @@
 
         runAllScripts();
       };
+
+      // fill in players from URL query
+      let searchParams = new URLSearchParams(window.location.search)
+      // loop 0:4
+      for (let i = 0; i < 5; i++) {
+        if (searchParams.has('player'+i)) {
+          let param = searchParams.get('player'+i);
+          appendProfile(param);
+        };
+      }
     </script>
   </body>
 </html>
