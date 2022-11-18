@@ -123,17 +123,27 @@ $(document).ready(function() {
 
     // add (region, username) pair
     $("#add_button").click(function() {
+        var proceed = true;
         // check if region is selected
         if ($(".search-user-text").text() == "Region") { alert("Please select a region"); return; }
         // check if username is selected
-        if ($(".username_input").val() == "") { alert("Please enter a valid username"); return; }
+        if ($("#username_input").val() == "") { alert("Please enter a valid username"); return; }
+        // check if user exists
         if (!players.includes($("#username_input").val())) { 
             alert("Username not found\n\nFor purposes of this demo, please use any of the following:\n\t Tyv \n\t Boxerme \n\t jasminebrew \n\t qotato \n\t ElegantDisaster ");
-            $(".username_input").val("");
+            $("#username_input").val("");
             return; 
         }
+        // check if user already being searched
+        $(".username_text").each( function() {
+            if ($("#username_input").val() == $(this).children().text()) {
+                alert("Username already included below");
+                $("#username_input").val("");
+                proceed = false; 
+            }
+        })
         if (addedPlayers >= addLimit) { alert("Cannot add more than 5 players"); return; }
-        else {
+        if (proceed) {
             var addingPlayer = `
             <div id="added_user_section"
                 class="added-user-container added-user-root-class-name"
