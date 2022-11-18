@@ -1,3 +1,7 @@
+body {
+  background-color: #114b5fff;
+}
+
 .porofile-title-icon-container {
   width: 100%;
   height: 311px;
@@ -59,7 +63,6 @@
   align-self: center;
   border-color: var(--dl-color-grays-dark100);
   border-width: 1px;
-  margin-right: 20px;
   border-radius: var(--dl-radius-radius-radius8);
   background-color: var(--dl-color-grays-white100);
 }
@@ -291,7 +294,7 @@
   width: 50px;
   height: 50px;
   display: flex;
-  font-size: 40px;
+  font-size: 39px;
   align-self: center;
   font-style: normal;
   text-align: center;
@@ -386,10 +389,6 @@
 }
 
 
-
-
-
-
 .search-button-container {
   width: 212px;
   height: 50px;
@@ -463,7 +462,7 @@
 }
 .landing-page-added-players-container {
   width: 100%;
-  height: 457px;
+  max-height: 350px;
   display: flex;
   align-items: center;
   margin-bottom: var(--dl-space-space-unit);

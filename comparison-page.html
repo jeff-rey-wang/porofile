@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
     <title>ComparisonPage - Porofile</title>
     <meta property="og:title" content="ComparisonPage - Porofile" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -61,6 +62,7 @@
 
       <div id="comparison_page" class="comparison-page-container">
         <div class="comparison-page-header">
+          <a href="index.html" class="comparison-page-navlink">
           <div
             class="porofile-home-btn-container porofile-home-btn-root-class-name"
           >
@@ -74,9 +76,14 @@
               <span>Porofile</span>
             </span>
           </div>
+        </a>
           <div
             id="shareButton"
             class="sharebnt-container button sharebnt-root-class-name"
+          >
+          <button
+            type="button"
+            onclick="copyText();alert('Link has been copied to clipboard!')"
           >
             <svg
               id="share_icon"
@@ -87,18 +94,37 @@
                 d="M832 694.857c0-14.857-5.714-28.571-16-38.857l-118.857-118.857c-10.286-10.286-24.571-16-38.857-16-16.571 0-29.714 6.286-41.143 18.286 18.857 18.857 41.143 34.857 41.143 64 0 30.286-24.571 54.857-54.857 54.857-29.143 0-45.143-22.286-64-41.143-12 11.429-18.857 24.571-18.857 41.714 0 14.286 5.714 28.571 16 38.857l117.714 118.286c10.286 10.286 24.571 15.429 38.857 15.429s28.571-5.143 38.857-14.857l84-83.429c10.286-10.286 16-24 16-38.286zM430.286 292c0-14.286-5.714-28.571-16-38.857l-117.714-118.286c-10.286-10.286-24.571-16-38.857-16s-28.571 5.714-38.857 15.429l-84 83.429c-10.286 10.286-16 24-16 38.286 0 14.857 5.714 28.571 16 38.857l118.857 118.857c10.286 10.286 24.571 15.429 38.857 15.429 16.571 0 29.714-5.714 41.143-17.714-18.857-18.857-41.143-34.857-41.143-64 0-30.286 24.571-54.857 54.857-54.857 29.143 0 45.143 22.286 64 41.143 12-11.429 18.857-24.571 18.857-41.714zM941.714 694.857c0 43.429-17.714 85.714-48.571 116l-84 83.429c-30.857 30.857-72.571 47.429-116 47.429-44 0-85.714-17.143-116.571-48.571l-117.714-118.286c-30.857-30.857-47.429-72.571-47.429-116 0-45.143 18.286-88 50.286-119.429l-50.286-50.286c-31.429 32-73.714 50.286-118.857 50.286-43.429 0-85.714-17.143-116.571-48l-118.857-118.857c-31.429-31.429-48-72.571-48-116.571 0-43.429 17.714-85.714 48.571-116l84-83.429c30.857-30.857 72.571-47.429 116-47.429 44 0 85.714 17.143 116.571 48.571l117.714 118.286c30.857 30.857 47.429 72.571 47.429 116 0 45.143-18.286 88-50.286 119.429l50.286 50.286c31.429-32 73.714-50.286 118.857-50.286 43.429 0 85.714 17.143 116.571 48l118.857 118.857c31.429 31.429 48 72.571 48 116.571z"
               ></path>
             </svg>
+          </button>
           </div>
+          <script>
+            function copyText() {
+          
+                /* Copy text into clipboard */
+                navigator.clipboard.writeText
+                    ("https://porofile.ca/user/Jyv");
+            }
+        </script>
         </div>
-        <div class="comparison-page-container1">
-          <div class="profile-container profile-root-class-name">
+        <div id = "profile_container" class="comparison-page-container1">
+          <div id = "a_user_profile" class="profile-container profile-root-class-name">
             <div id="profile_banner_container" class="profile-banner">
               <div
                 id="profile_banner"
                 class="banner-container banner-root-class-name"
               >
+                <button
+                  type="button"
+                  onclick="remove_profile()"
+                >
                 <div id="banner_x_button" class="banner-container1 button">
                   <span id="banner_x_text"><span>X</span></span>
                 </div>
+                </button>
+                <script>
+                  function remove_profile(){
+                    document.getElementById("a_user_profile").style.display = "none"
+                  }
+                </script>
                 <div id="banner_iconname_container" class="banner-container2">
                   <div id="banner_picture_container" class="banner-picture">
                     <img
@@ -587,11 +613,16 @@
             </div>
           </div>
           <div
-            class="profile-placeholder-container profile-placeholder-root-class-name"
+            id="profile_placeholder" class="profile-placeholder-container profile-placeholder-root-class-name"
           >
+          <div id="overlay" class="overlay"></div>
             <div
               id="addPlayer_btn"
               class="profile-placeholder-container1 button"
+            >
+            <button 
+              type="button"
+              onclick="add_Player()"
             >
               <svg
                 id="add_player_btn_icon"
@@ -602,13 +633,167 @@
                   d="M992 384h-352v-352c0-17.672-14.328-32-32-32h-192c-17.672 0-32 14.328-32 32v352h-352c-17.672 0-32 14.328-32 32v192c0 17.672 14.328 32 32 32h352v352c0 17.672 14.328 32 32 32h192c17.672 0 32-14.328 32-32v-352h352c17.672 0 32-14.328 32-32v-192c0-17.672-14.328-32-32-32z"
                 ></path>
               </svg>
-            </div>
+            </button>
+          </div>
+            <script>
+              function add_Player(){
+                    document.getElementById("add_new_profile_box").style.display = "flex"
+                    document.getElementById("overlay").style.display = "flex"
+                  }
+            </script>
           </div>
         </div>
+        <div
+            id="add_new_profile_box"
+            class="add-new-profile-popup-container add-new-profile-popup-root-class-name"
+          >
+            <div
+              id="add_profile_header"
+              class="add-new-profile-popup-container1"
+            >
+              <button
+                  type="button"
+                  onclick="remove_popup()"
+              >
+                <div
+                  id="add_new_x_button"
+                  class="add-new-profile-popup-container2 button"
+                >
+                  <span id="banner_x_text" class="add-new-profile-popup-text">
+                    <span>X</span>
+                  </span>
+                </div>
+              </button>
+              <script>
+                function remove_popup(){
+                  document.getElementById("add_new_profile_box").style.display = "none"
+                  document.getElementById("overlay").style.display = "none"
+                }
+              </script>
+              <h1 id="add_profile_title" class="add-new-profile-popup-text01">
+                <span>Add New User Profile</span>
+              </h1>
+            </div>
+            <div class="add-new-profile-popup-container3">
+              <div
+                data-thq="thq-dropdown"
+                class="add-new-profile-popup-thq-dropdown list-item"
+              >
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="add-new-profile-popup-dropdown-toggle"
+                >
+                  <span class="add-new-profile-popup-text02">
+                    <span>Region</span>
+                    <br />
+                  </span>
+                  <div
+                    data-thq="thq-dropdown-arrow"
+                    class="add-new-profile-popup-dropdown-arrow"
+                  >
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      class="add-new-profile-popup-icon"
+                    >
+                      <path d="M426 726v-428l214 214z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <ul
+                  data-thq="thq-dropdown-list"
+                  class="add-new-profile-popup-dropdown-list"
+                >
+                  <li
+                    data-thq="thq-dropdown"
+                    class="add-new-profile-popup-dropdown list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="add-new-profile-popup-dropdown-toggle1"
+                    >
+                      <span class="add-new-profile-popup-text05">NA</span>
+                    </div>
+                  </li>
+                  <li
+                    data-thq="thq-dropdown"
+                    class="add-new-profile-popup-dropdown1 list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="add-new-profile-popup-dropdown-toggle2"
+                    >
+                      <span class="add-new-profile-popup-text06">EU</span>
+                    </div>
+                  </li>
+                  <li
+                    data-thq="thq-dropdown"
+                    class="add-new-profile-popup-dropdown2 list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="add-new-profile-popup-dropdown-toggle3"
+                    >
+                      <span class="add-new-profile-popup-text07">KO</span>
+                    </div>
+                  </li>
+                  <li
+                    data-thq="thq-dropdown"
+                    class="add-new-profile-popup-dropdown3 list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="add-new-profile-popup-dropdown-toggle4"
+                    >
+                      <span class="add-new-profile-popup-text08">BR</span>
+                    </div>
+                  </li>
+                  <li
+                    data-thq="thq-dropdown"
+                    class="add-new-profile-popup-dropdown4 list-item"
+                  >
+                    <div
+                      data-thq="thq-dropdown-toggle"
+                      class="add-new-profile-popup-dropdown-toggle5"
+                    >
+                      <span class="add-new-profile-popup-text09">CN</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <input
+                type="text"
+                id="add_new_user_input"
+                placeholder="Username..."
+                class="add-new-profile-popup-textinput input"
+              />
+              <div
+                id="add_new_user_button"
+                class="add-new-profile-popup-button button"
+              >
+              <button
+                  type="button"
+                  onclick="remove_popup()"
+                >
+                <svg
+                  viewBox="0 0 950.8571428571428 1024"
+                  class="add-new-profile-popup-icon2"
+                >
+                  <path
+                    d="M658.286 475.429c0-141.143-114.857-256-256-256s-256 114.857-256 256 114.857 256 256 256 256-114.857 256-256zM950.857 950.857c0 40-33.143 73.143-73.143 73.143-19.429 0-38.286-8-51.429-21.714l-196-195.429c-66.857 46.286-146.857 70.857-228 70.857-222.286 0-402.286-180-402.286-402.286s180-402.286 402.286-402.286 402.286 180 402.286 402.286c0 81.143-24.571 161.143-70.857 228l196 196c13.143 13.143 21.143 32 21.143 51.429z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            </div>
+          </div>
         <div class="comparison-page-footer"></div>
       </div>
     </div>
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    <script src="assets/js/comparison-page.js"></script>
+    <script src="assets/js/appendProfile.js"></script>
+    <script src="assets/js/addUserPopup.js"></script>
+    
     <script>
       window.onload = () => {
         const runAllScripts = () => {
