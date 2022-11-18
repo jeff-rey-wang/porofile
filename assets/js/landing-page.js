@@ -1,5 +1,5 @@
 // hardcoded username data
-var players = ["Tyv", "Boxerme", "jasminebrew", "qotato", "ElegantDisaster", "Ji&#353un"];
+var players = ["Tyv", "Boxerme", "jasminebrew", "qotato", "ElegantDisaster"];
 // limit to adding 5 players per search
 const addLimit = 5;
 var addedPlayers = 0;
@@ -116,7 +116,11 @@ $(document).ready(function() {
         if ($(".search-user-text").text() == "Region") { alert("Please select a region"); return; }
         // check if username is selected
         if ($("#username_input").val() == "") { alert("Please enter a valid username"); return; }
-
+        if (!players.includes($("#username_input").val())) { 
+            alert("Username not found\n\nFor purposes of this demo, please use any of the following:\n\t Tyv \n\t Boxerme \n\t jasminebrew \n\t qotato \n\t ElegantDisaster ");
+            $("#username_input").val("");
+            return; 
+        }
         if (addedPlayers >= addLimit) { alert("Cannot add more than 5 players"); return; }
         else {
             var addingPlayer = `
@@ -162,6 +166,7 @@ $(document).ready(function() {
     });
 
     // view profiles
+    // TODO: pass player names as queries
     $(".search-button-container2").click(function() {
         if (addedPlayers) window.location.href = "comparison-page.html";
         else alert("Please add a player");
