@@ -10,18 +10,35 @@ const appendProfile = (username) => {
 }
 
 
-const createDiv = (number, username, ranks, tags, positions, champs, playedWith) => {
+const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) => {
 
-    var top_icon = ''
-    var jg_icon = ''
-    var mid_icon = ''
-    var adc_icon = ''
-    var sup_icon = ''
+    var top_opacity = 0.35
+    var jg_opacity = 0.35
+    var mid_opacity = 0.35
+    var bot_opacity = 0.35
+    var sup_opacity = 0.35
+
+    if (positions[0] == Roles.Top || positions[1] == Roles.Top) top_opacity = 1
+    if (positions[0] == Roles.Jungle || positions[1] == Roles.Jungle) jg_opacity = 1
+    if (positions[0] == Roles.Mid || positions[1] == Roles.Mid) mid_opacity = 1
+    if (positions[0] == Roles.Bot || positions[1] == Roles.Bot) bot_opacity = 1
+    if (positions[0] == Roles.Sup || positions[1] == Roles.Sup) sup_opacity = 1
+
     return `<div id = "a_user_profile" class="profile-container profile-root-class-name">
     <div id="profile_banner_container" class="profile-banner">
       <div
         id="profile_banner"
         class="banner-container banner-root-class-name"
+        style="
+        width: 275px;
+        height: 80px;
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+        border-radius: var(--dl-radius-radius-radius8);
+        flex-direction: row;
+        background-size: cover;
+        background-image: url(${intro[2]});"
       >
         <button
           type="button"
@@ -41,13 +58,13 @@ const createDiv = (number, username, ranks, tags, positions, champs, playedWith)
             <img
               id="banner_profile_icon"
               alt="image"
-              src="image"
+              src="${intro[1]}"
               class="banner-image"
             />
           </div>
           <div id="banner_username_container" class="banner-username">
             <span id="banner_username_text" class="banner-text1">
-              <span>${username}</span>
+              <span>${intro[0]}</span>
             </span>
           </div>
         </div>
@@ -87,36 +104,41 @@ const createDiv = (number, username, ranks, tags, positions, champs, playedWith)
         id="profile_rolelist"
         class="role-list-container role-list-root-class-name"
       >
-        <img
-          id="top_icon"
-          alt="image"
-          src="https://play.teleporthq.io/static/svg/default-img.svg"
-          class="role-list-image"
-        />
-        <img
-          id="jg_icon"
-          alt="image"
-          src="https://play.teleporthq.io/static/svg/default-img.svg"
-          class="role-list-image1"
-        />
-        <img
-          id="mid_icon"
-          alt="image"
-          src="https://play.teleporthq.io/static/svg/default-img.svg"
-          class="role-list-image2"
-        />
-        <img
-          id="adc_icon"
-          alt="image"
-          src="https://play.teleporthq.io/static/svg/default-img.svg"
-          class="role-list-image3"
-        />
-        <img
-          id="sup_icon"
-          alt="image"
-          src="https://play.teleporthq.io/static/svg/default-img.svg"
-          class="role-list-image4"
-        />
+      <img
+      id="top_icon"
+      alt="image"
+      src="assets/imgs/Top_icon.png"
+      class="role-list-image"
+      style='opacity: ${top_opacity};'
+    />
+    <img
+      id="jg_icon"
+      alt="image"
+      src="assets/imgs/Jungle_icon.png"
+      class="role-list-image1"
+      style='opacity: ${jg_opacity};'
+    />
+    <img
+      id="mid_icon"
+      alt="image"
+      src="assets/imgs/Middle_icon.png"
+      class="role-list-image2"
+      style='opacity: ${mid_opacity};'
+    />
+    <img
+      id="adc_icon"
+      alt="image"
+      src="assets/imgs/Bottom_icon.png"
+      class="role-list-image3"
+      style='opacity: ${bot_opacity};'
+    />
+    <img
+      id="sup_icon"
+      alt="image"
+      src="assets/imgs/Support_icon.png"
+      class="role-list-image4"
+      style='opacity: ${sup_opacity};'
+    />
       </div>
     </div>
     <div id="profile_champions_container" class="profile-container2">
@@ -134,7 +156,7 @@ const createDiv = (number, username, ranks, tags, positions, champs, playedWith)
         <div
           id="champs_1_container"
           class="most-played-champs-container01"
-          style="background-image: url('${}');"
+          style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url(${champs[0].banner});"
         >
           <div
             id="champ1_WRandgames_container"
@@ -170,6 +192,7 @@ const createDiv = (number, username, ranks, tags, positions, champs, playedWith)
             <div
               id="champ1_icon"
               class="most-played-champs-container06"
+              style="background-image: url('${champs[0].picture}');"
             ></div>
             <div
               id="champ1_charactername_container"
@@ -214,6 +237,7 @@ const createDiv = (number, username, ranks, tags, positions, champs, playedWith)
         <div
           id="champs_1_container"
           class="most-played-champs-container11"
+          style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url(${champs[1].banner});"
         >
           <div
             id="champ2_WRandgames_container"
@@ -249,6 +273,7 @@ const createDiv = (number, username, ranks, tags, positions, champs, playedWith)
             <div
               id="champ2_icon"
               class="most-played-champs-container16"
+              style="background-image: url('${champs[1].picture}');"
             ></div>
             <div
               id="champ2_charactername_container"
@@ -293,6 +318,7 @@ const createDiv = (number, username, ranks, tags, positions, champs, playedWith)
         <div
           id="champs_3_container"
           class="most-played-champs-container21"
+          style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url(${champs[2].banner});"
         >
           <div
             id="champ3_WRandgames_container"
@@ -328,6 +354,7 @@ const createDiv = (number, username, ranks, tags, positions, champs, playedWith)
             <div
               id="champ3_icon"
               class="most-played-champs-container26"
+              style="background-image: url('${champs[2].picture}');"
             ></div>
             <div
               id="champ3_charactername_container"
