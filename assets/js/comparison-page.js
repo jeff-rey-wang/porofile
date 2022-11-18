@@ -109,7 +109,11 @@ function champStats(
 
 function populate_col(username) {
   if (username == "jasminebrew") {
-    background = "assets/imgs/jasminebrew.png";
+    intro = [
+      "jasminebrew",
+      "assets/imgs/jasminebrew.png",
+      "assets/imgs/Seraphine_OriginalCentered.png",
+    ];
     ranks = ["none", "B2"];
     tags = [Tags.Escapist, Tags.Visionless, Tags.Pacifist];
     positions = ["sup"];
@@ -150,7 +154,11 @@ function populate_col(username) {
     ];
     playedWith = [player("Tyv", 56, 18), player("Boxerme", 50, 6)];
   } else if (username == "qotato") {
-    background = "assets/imgs/qotato.png";
+    intro = [
+      "qotato",
+      "assets/imgs/qotato.png",
+      "assets/imgs/Teemo_OriginalCentered.png",
+    ];
     //G3 solo, no flex
     ranks = ["G3", "none"];
     //Midgame Master - green
@@ -200,7 +208,11 @@ function populate_col(username) {
     //Boxerme 70wr 10 games, ElegantDisaster 66wr 6 games
     playedWith = [player("Boxerme", 70, 10), player("ElegantDisaster", 66, 6)];
   } else if (username == "Boxerme") {
-    background = "assets/imgs/Boxerme.png";
+    intro = [
+      "Boxerme",
+      "assets/imgs/Boxerme.png",
+      "assets/imgs/Galio_OriginalCentered.png",
+    ];
     ranks = ["none", "B1"];
     tags = [Tags.LateBloomer, Tags.ReadyToRumble, Tags.HungryForBlood];
     positions = ["mid", "top"];
@@ -244,7 +256,11 @@ function populate_col(username) {
       player("ElegantDisaster", 55, 13),
     ];
   } else if (username == "ElegantDisaster") {
-    background = "assets/imgs/ElegantDisaster.png";
+    intro = [
+      "ElegatnDisaster",
+      "assets/imgs/ElegantDisaster.png",
+      "assets/imgs/Zyra_OriginalCentered.png",
+    ];
     ranks = ["G2", "none"];
     tags = [Tags.EarlyWarder, Tags.VisionFocused, Tags.Responsible];
     positions = ["bot", "sup"];
@@ -285,7 +301,11 @@ function populate_col(username) {
     ];
     playedWith = [player("qotato", 50, 12), player("Tyv", 50, 4)];
   } else if (username == "Tyv") {
-    background = "assets/imgs/Tyv.png";
+    intro = [
+      "Tyv",
+      "assets/imgs/Tyv.png",
+      "assets/imgs/Zed_OriginalCentered.png",
+    ];
     ranks = ["D4", "none"];
     tags = [Tags.DeadlyDuelist, Tags.SolidLaner, Tags.UltimatePredator];
     positions = ["mid", "bot"];
@@ -329,5 +349,6 @@ function populate_col(username) {
       player("ElegantDisaster", 50, 4),
     ];
   } else {
+    // something else?
   }
 }
