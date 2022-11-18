@@ -5,7 +5,7 @@ $('#add_new_user_button').click(()=>{
     if (numProfiles >= 5){
         $('#profile_placeholder').hide();
     }
-    
+    $('#add_new_user_input').val("");
 })
 
 $('#banner_x_button').click(()=>{    
