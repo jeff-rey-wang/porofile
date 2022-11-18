@@ -72,6 +72,14 @@ const Tags = {
   ],
 };
 
+const Roles = {
+  Top: [],
+  Jungle: [],
+  Mid: [],
+  Bot: [],
+  Support: [],
+};
+
 function player(username, winrate, gamesPlayed) {
   this.username = username;
   this.winrate = winrate;
@@ -84,7 +92,9 @@ function champStats(
   kills,
   deaths,
   assists,
-  kda
+  kda,
+  picture,
+  banner
 ) {
   this.champName = champName;
   this.gamesPlayed = gamesPlayed;
@@ -93,6 +103,8 @@ function champStats(
   this.deaths = deaths;
   this.assists = assists;
   this.kda = kda;
+  this.URL = picture;
+  this.bannerURL = banner;
 }
 
 function populate_col(username) {
@@ -101,7 +113,16 @@ function populate_col(username) {
     tags = [Tags.Escapist, Tags.Visionless, Tags.Pacifist];
     positions = ["sup"];
     champs = [
-      champStats("Seraphine", 34, 50, 1.5, 6.6, 8.7, 1.55),
+      champStats(
+        "Seraphine",
+        34,
+        50,
+        1.5,
+        6.6,
+        8.7,
+        1.55,
+        "assets/imgs/Seraphine"
+      ),
       champStats("Jinx", 27, 44, 3.4, 7.0, 6.9, 1.47),
       champStats("Ashe", 22, 45, 1.0, 6.5, 9.7, 1.63),
     ];
