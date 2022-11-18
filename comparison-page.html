@@ -111,6 +111,16 @@
               <div
                 id="profile_banner"
                 class="banner-container banner-root-class-name"
+                style="
+                  width: 275px;
+                  height: 80px;
+                  display: flex;
+                  position: relative;
+                  align-items: flex-start;
+                  border-radius: var(--dl-radius-radius-radius8);
+                  flex-direction: row;
+                  background-size: cover;
+                  background-image: url('assets/imgs/Zyra_OriginalCentered.png');"
               >
                 <button
                   type="button"
@@ -147,17 +157,17 @@
                 id="profile_taglist"
                 class="taglist-container taglist-root-class-name"
               >
-                <div id="taglist_tag1_container" class="taglist-tag1">
+                <div id="taglist_tag1_container" class="taglist-tag1" data-tooltip="Tooltip Hover">
                   <span id="taglist_tag1_text" class="taglist-tag1text">
                     <span>tag</span>
                   </span>
                 </div>
-                <div id="taglist_tag2_container" class="taglist-tag2">
+                <div id="taglist_tag2_container" class="taglist-tag2" data-tooltip="Tooltip Hover">
                   <span id="taglist_tag2_text" class="taglist-tag2text">
                     <span>tag</span>
                   </span>
                 </div>
-                <div id="taglist_tag3_container" class="taglist-tag3">
+                <div id="taglist_tag3_container" class="taglist-tag3" data-tooltip="Tooltip Hover">
                   <span id="taglist_tag3_text" class="taglist-tag3text">
                     <span>tag</span>
                   </span>
@@ -167,50 +177,7 @@
             <div id="profile_ranks_container" class="profile-ranks">
               <div
                 class="rank-carousel-container rank-carousel-root-class-name"
-              >
-                  
-                  
-                  <div class="rank-carousel-ranked-contents">
-                      <head>
-                          <style>
-                              {
-                                  box-sizing: border-box;
-                              }
-                              /* Set additional styling options for the columns*/
-                              .column {
-                                  float: left;
-                                  width: 50%;
-                                  text-align: center;
-                              }
-
-                              .row:after {
-                                  content: "";
-                                  display: table;
-                                  clear: both;
-                              }
-                          </style>
-                      </head>
-                      <div class="row">
-                          <div class="column" >
-                              Ranked Solo
-                              <img id="gold_icon"
-                                   alt="Gold Division Icon"
-                                   src="https://static.wikia.nocookie.net/leagueoflegends/images/8/8d/Season_2022_-_Gold.png/revision/latest?cb=20220105214225" 
-                                   width="1000" height="1000"
-                                   class="role-list-image" />
-                              Gold II
-                          </div>
-                          <div class="column">
-                              Ranked Flex
-                              <img id="unranked_icon"
-                                   alt="Unranked Icon"
-                                   src="https://static.wikia.nocookie.net/leagueoflegends/images/5/5e/Season_2019_-_Provisional.png/revision/latest?cb=20190908074433"
-                                   class="role-list-image" />
-                              Unranked
-                          </div>
-                      </div>
-                  </div>
-                
+              >                
                   
               </div>
             </div>
@@ -266,6 +233,7 @@
                 <div
                   id="champs_1_container"
                   class="most-played-champs-container01"
+                  style="background-image: url('assets/imgs/Ashe_OriginalCentered.png');"
                 >
                   <div
                     id="champ1_WRandgames_container"
@@ -345,6 +313,7 @@
                 <div
                   id="champs_1_container"
                   class="most-played-champs-container11"
+                  style="background-image: url('assets/imgs/Ashe_OriginalCentered.png');"
                 >
                   <div
                     id="champ2_WRandgames_container"
@@ -424,6 +393,7 @@
                 <div
                   id="champs_3_container"
                   class="most-played-champs-container21"
+                  style="background-image: url('assets/imgs/Ashe_OriginalCentered.png');"
                 >
                   <div
                     id="champ3_WRandgames_container"
