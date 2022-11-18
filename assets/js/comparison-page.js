@@ -72,57 +72,95 @@ const Tags = {
   ],
 };
 
+function player(username, winrate, gamesPlayed) {
+  this.username = username;
+  this.winrate = winrate;
+  this.gamesPlayed = gamesPlayed;
+}
+function champStats(
+  champName,
+  gamesPlayed,
+  winrate,
+  kills,
+  deaths,
+  assists,
+  kda
+) {
+  this.champName = champName;
+  this.gamesPlayed = gamesPlayed;
+  this.winrate = winrate;
+  this.kills = kills;
+  this.deaths = deaths;
+  this.assists = assists;
+  this.kda = kda;
+}
+
 function populate_col(username) {
   if (username == "jasminebrew") {
-    // no solo, B2 flex
+    ranks = ["none", "B2"];
     tags = { Escapist, Visionless, Pacifist };
-    //sup 25% vs 100% opacity on no-sup vs sup
-    //seraphine 34 - 50%wr - 1.5/6.6/8.7 - 1.55kda
-    //jinx 27 - 44%wr - 3.4/7.0/6.9 - 1.47kda
-    //ashe 22 - 45%wr - 1.0/6.5/9.7 - 1.63kda
-    // Tyv 56wr 18games, Boxerme 50wr, 6games
+    positions = ["sup"];
+    champs = [
+      champStats("Seraphine", 34, 50, 1.5, 6.6, 8.7, 1.55),
+      champStats("Jinx", 27, 44, 3.4, 7.0, 6.9, 1.47),
+      champStats("Ashe", 22, 45, 1.0, 6.5, 9.7, 1.63),
+    ];
+    playedWith = [player("Tyv", 56, 18), player("Boxerme", 50, 6)];
   } else if (username == "qotato") {
     //G3 solo, no flex
+    ranks = ["G3", "none"];
     //Midgame Master - green
     //Lane tyrant - green
     //Late bloomer - green
     tags = { MidgameMaster, LaneTyrant, LateBloomer };
-
     //top, bot
+    positions = ["top", "bot"];
     //teemo 15 - 53%wr - 6.3/5.7/5.9 - 2.1kda
     //samira 11 - 36%wr - 8.3/5.1/5.1 - 2.6kda
     //fiora 4 - 75%wr - 4.0/4.3/3.5 - 1.8kda
+    champs = [
+      champStats("Teemo", 15, 53, 6.3, 5.7, 5.9, 2.1),
+      champStats("Samira", 11, 36, 8.3, 5.1, 5.1, 2.6),
+      champStats("Fiora", 4, 75, 4.0, 4.3, 3.5, 1.8),
+    ];
     //Boxerme 70wr 10 games, ElegantDisaster 66wr 6 games
+    playedWith = [player("Boxerme", 70, 10), player("ElegantDisaster", 66, 6)];
   } else if (username == "Boxerme") {
-    // no solo, B1 flex
-    //Late bloomer - green
-    //Hungry for Blood - yellow
-    //Ready to Rumble - yellow
-    //mid, top
-    //galio 10-40%wr - 4.5/7.0/8.2 - 1.8kda
-    //shen 8 -75%wr - 4.0/3.0/8.4 - 4.1kda
-    //xerath 8 - 25%wr - 8.9/6.0/9.8 - 3.1kda
-    //jasminebrew 53wr 17 games, Tyv 55wr, 13 games
+    ranks = ["none", "B1"];
+    tags = { LateBloomer, ReadyToRumble, HungryForBlood };
+    positions = ["mid", "top"];
+    champs = [
+      champStats("Galio", 10, 40, 4.5, 7.0, 8.2, 1.8),
+      champStats("Shen", 8, 75, 4.0, 3.0, 8.4, 4.1),
+      champStats("Xerath", 8, 25, 8.9, 6.0, 9.8, 3.1),
+    ];
+    playedWith = [
+      player("jasminebrew", 53, 17),
+      player("ElegantDisaster", 55, 13),
+    ];
   } else if (username == "ElegantDisaster") {
-    // G2 solo, no flex
-    //Early Warder - green
-    //Vision focused - green
-    //Responsible - green
-    // bot, sup
-    // zyra 61 - 62wr 3.3/6.3/11.5 - 2.33kda
-    // yuumi 52 - 56wr 2.4/4.5/17.0 - 4.3kda
-    // MF 39 - 51wr 4.8/5.9/8.2 - 2.19kda
-    // qotato 50wr 12 game, Tyv 50wr 4 game
+    ranks = ["G2", "none"];
+    tags = { EarlyWarder, VisionFocused, Responsible };
+    positions = ["bot", "sup"];
+    champs = [
+      champStats("Zyra", 61, 40, 3.3, 6.3, 11.5, 2.33),
+      champStats("Yuumi", 52, 75, 2.4, 4.5, 17.0, 4.3),
+      champStats("Miss Fortune", 39, 25, 4.8, 5.9, 8.2, 2.19),
+    ];
+    playedWith = [player("qotato", 50, 12), player("Tyv", 50, 4)];
   } else if (username == "Tyv") {
-    // D4 solo, G2 flex
-    //Deadly Duelist - green
-    //Solid Laner - green
-    //Ultimate Predator - green
-    // mid, bot
-    // zed 193 - 64wr 9.6/4.8/5.2 - 3.1kda
-    // sylas 77 - 58wr 8.1/7.3/6.9 - 1.9kda
-    // zoe 73 - 50wr 6.8/4.4/7.6 - 3.25kda
-    // jasminebrew 43wr 7 game, ElegantDisaster 50 wr 4 game
+    ranks = ["D4", "none"];
+    tags = { DeadlyDuelist, SolidLaner, UltimatePredator };
+    positions = ["mid", "bot"];
+    champs = [
+      champStats("Zed", 193, 64, 9.6, 4.8, 5.2, 3.1),
+      champStats("Sylas", 77, 58, 8.1, 7.3, 6.9, 1.9),
+      champStats("Zoe", 73, 50, 6.8, 4.4, 7.6, 3.25),
+    ];
+    playedWith = [
+      player("jasminebrew", 43, 7),
+      player("ElegantDisaster", 50, 4),
+    ];
   } else {
     //User not found scenario
   }
