@@ -73,11 +73,11 @@ const Tags = {
 };
 
 const Roles = {
-  Top: [],
-  Jungle: [],
-  Mid: [],
-  Bot: [],
-  Support: [],
+  Top: ["Top", "assets/imgs/Top_icon.png"],
+  Jg: ["Jungle", "assets/imgs/Jungle_icon.png"],
+  Mid: ["Mid", "assets/imgs/Middle_icon.png"],
+  Bot: ["Bot", "assets/imgs/Bottom_icon.png"],
+  Sup: ["Support", "assets/imgs/Support_icon.png"],
 };
 
 function player(username, winrate, gamesPlayed) {
@@ -116,7 +116,7 @@ function populate_col(username) {
     ];
     ranks = ["none", "B2"];
     tags = [Tags.Escapist, Tags.Visionless, Tags.Pacifist];
-    positions = ["sup"];
+    positions = [Roles.Sup];
     champs = [
       champStats(
         "Seraphine",
@@ -166,7 +166,7 @@ function populate_col(username) {
     //Late bloomer - green
     tags = [Tags.MidgameMaster, Tags.LaneTyrant, Tags.LateBloomer];
     //top, bot
-    positions = ["top", "bot"];
+    positions = [Roles.Top, Roles.Bot];
     //teemo 15 - 53%wr - 6.3/5.7/5.9 - 2.1kda
     //samira 11 - 36%wr - 8.3/5.1/5.1 - 2.6kda
     //fiora 4 - 75%wr - 4.0/4.3/3.5 - 1.8kda
@@ -215,7 +215,7 @@ function populate_col(username) {
     ];
     ranks = ["none", "B1"];
     tags = [Tags.LateBloomer, Tags.ReadyToRumble, Tags.HungryForBlood];
-    positions = ["mid", "top"];
+    positions = [Roles.Mid, Roles.Bot];
     champs = [
       champStats(
         "Galio",
@@ -263,7 +263,7 @@ function populate_col(username) {
     ];
     ranks = ["G2", "none"];
     tags = [Tags.EarlyWarder, Tags.VisionFocused, Tags.Responsible];
-    positions = ["bot", "sup"];
+    positions = [Roles.Bot, Roles.Sup];
     champs = [
       champStats(
         "Zyra",
@@ -308,7 +308,7 @@ function populate_col(username) {
     ];
     ranks = ["D4", "none"];
     tags = [Tags.DeadlyDuelist, Tags.SolidLaner, Tags.UltimatePredator];
-    positions = ["mid", "bot"];
+    positions = [Roles.Mid, Roles.Bot];
     champs = [
       champStats(
         "Zed",
