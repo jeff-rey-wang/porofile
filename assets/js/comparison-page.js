@@ -163,9 +163,39 @@ function populate_col(username) {
     //samira 11 - 36%wr - 8.3/5.1/5.1 - 2.6kda
     //fiora 4 - 75%wr - 4.0/4.3/3.5 - 1.8kda
     champs = [
-      champStats("Teemo", 15, 53, 6.3, 5.7, 5.9, 2.1),
-      champStats("Samira", 11, 36, 8.3, 5.1, 5.1, 2.6),
-      champStats("Fiora", 4, 75, 4.0, 4.3, 3.5, 1.8),
+      champStats(
+        "Teemo",
+        15,
+        53,
+        6.3,
+        5.7,
+        5.9,
+        2.1,
+        "assets/imgs/Teemo_OriginalCircle.png",
+        "assets/imgs/Teemo_OriginalCentered.png"
+      ),
+      champStats(
+        "Samira",
+        11,
+        36,
+        8.3,
+        5.1,
+        5.1,
+        2.6,
+        "assets/imgs/Samira_OriginalCircle.png",
+        "assets/imgs/Samira_OriginalCentered.png"
+      ),
+      champStats(
+        "Fiora",
+        4,
+        75,
+        4.0,
+        4.3,
+        3.5,
+        1.8,
+        "assets/imgs/Fiora_OriginalCircle.png",
+        "assets/imgs/Fiora_OriginalCentered.png"
+      ),
     ];
     //Boxerme 70wr 10 games, ElegantDisaster 66wr 6 games
     playedWith = [player("Boxerme", 70, 10), player("ElegantDisaster", 66, 6)];
