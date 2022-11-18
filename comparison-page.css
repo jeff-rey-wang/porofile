@@ -6,6 +6,8 @@
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
+  margin-left: 15px;
+  margin-top: 15px;
 }
 .porofile-home-btn-image {
   width: 90px;
@@ -41,6 +43,7 @@
   padding-bottom: 0px;
   justify-content: center;
   background-color: #007EE7;
+  margin-right: 15px;
 }
 .sharebnt-container:hover {
   height: 60px;
@@ -925,6 +928,8 @@
 .add-new-profile-popup-thq-dropdown {
   cursor: pointer;
   display: inline-block;
+  width: 15%;
+  margin-left: 15px;
   position: relative;
   border-radius: var(--dl-radius-radius-radius2);
 }
@@ -1168,6 +1173,7 @@
   justify-content: center;
   text-decoration: none;
   background-color: #88d498;
+  margin-right: 15px;
 }
 .add-new-profile-popup-button:hover {
   background-color: green;
@@ -1225,4 +1231,8 @@
   height: 100%;
   display: flex;
   align-items: flex-start;
+}
+.add-add-button {
+  font-size: 15px;
+  margin-top: 45%;
 }
