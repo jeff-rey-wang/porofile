@@ -98,7 +98,7 @@ function champStats(
 function populate_col(username) {
   if (username == "jasminebrew") {
     ranks = ["none", "B2"];
-    tags = { Escapist, Visionless, Pacifist };
+    tags = [Tags.Escapist, Tags.Visionless, Tags.Pacifist];
     positions = ["sup"];
     champs = [
       champStats("Seraphine", 34, 50, 1.5, 6.6, 8.7, 1.55),
@@ -112,7 +112,7 @@ function populate_col(username) {
     //Midgame Master - green
     //Lane tyrant - green
     //Late bloomer - green
-    tags = { MidgameMaster, LaneTyrant, LateBloomer };
+    tags = [Tags.MidgameMaster, Tags.LaneTyrant, Tags.LateBloomer];
     //top, bot
     positions = ["top", "bot"];
     //teemo 15 - 53%wr - 6.3/5.7/5.9 - 2.1kda
@@ -127,7 +127,7 @@ function populate_col(username) {
     playedWith = [player("Boxerme", 70, 10), player("ElegantDisaster", 66, 6)];
   } else if (username == "Boxerme") {
     ranks = ["none", "B1"];
-    tags = { LateBloomer, ReadyToRumble, HungryForBlood };
+    tags = [Tags.LateBloomer, Tags.ReadyToRumble, Tags.HungryForBlood];
     positions = ["mid", "top"];
     champs = [
       champStats("Galio", 10, 40, 4.5, 7.0, 8.2, 1.8),
@@ -140,7 +140,7 @@ function populate_col(username) {
     ];
   } else if (username == "ElegantDisaster") {
     ranks = ["G2", "none"];
-    tags = { EarlyWarder, VisionFocused, Responsible };
+    tags = [Tags.EarlyWarder, Tags.VisionFocused, Tags.Responsible];
     positions = ["bot", "sup"];
     champs = [
       champStats("Zyra", 61, 40, 3.3, 6.3, 11.5, 2.33),
@@ -150,7 +150,7 @@ function populate_col(username) {
     playedWith = [player("qotato", 50, 12), player("Tyv", 50, 4)];
   } else if (username == "Tyv") {
     ranks = ["D4", "none"];
-    tags = { DeadlyDuelist, SolidLaner, UltimatePredator };
+    tags = [Tags.DeadlyDuelist, Tags.SolidLaner, Tags.UltimatePredator];
     positions = ["mid", "bot"];
     champs = [
       champStats("Zed", 193, 64, 9.6, 4.8, 5.2, 3.1),
