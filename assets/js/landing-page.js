@@ -1,5 +1,5 @@
 // hardcoded username data
-var players = ["Tyv", "Boxerme", "jasminebrew", "qotato", "ElegantDisaster", "Ji&#353un"];
+var players = ["Tyv", "Boxerme", "jasminebrew", "qotato", "ElegantDisaster"];
 // limit to adding 5 players per search
 const addLimit = 5;
 var addedPlayers = 0;
@@ -102,23 +102,48 @@ function autocomplete(inp, arr) {
     });
 }
 
-
 $(document).ready(function() {
+    // region onclick
+    $(".search-user-dropdown-toggle").click(function() {
+        if (!$(".search-user-dropdown-list").hasClass("expanded")) {
+            $(".search-user-dropdown-list").addClass("expanded");
+            $(".search-user-dropdown-list").css("display", "flex");
+        } else {
+            $(".search-user-dropdown-list").removeClass("expanded");
+            $(".search-user-dropdown-list").css("display", "none");
+        }
+    });
+
     // select region
     $(".region-option").click(function() {
-        // alert($(this).children().text());
         $(".search-user-text").text($(this).children().text());
+        $(".search-user-dropdown-list").removeClass("expanded");
+        $(".search-user-dropdown-list").css("display", "none");
     });
 
     // add (region, username) pair
     $("#add_button").click(function() {
+        var proceed = true;
         // check if region is selected
         if ($(".search-user-text").text() == "Region") { alert("Please select a region"); return; }
         // check if username is selected
         if ($("#username_input").val() == "") { alert("Please enter a valid username"); return; }
-
+        // check if user exists
+        if (!players.includes($("#username_input").val())) { 
+            alert("Username not found\n\nFor purposes of this demo, please use any of the following:\n\t Tyv \n\t Boxerme \n\t jasminebrew \n\t qotato \n\t ElegantDisaster ");
+            $("#username_input").val("");
+            return; 
+        }
+        // check if user already being searched
+        $(".username_text").each( function() {
+            if ($("#username_input").val() == $(this).children().text()) {
+                alert("Username already included below");
+                $("#username_input").val("");
+                proceed = false; 
+            }
+        })
         if (addedPlayers >= addLimit) { alert("Cannot add more than 5 players"); return; }
-        else {
+        if (proceed) {
             var addingPlayer = `
             <div id="added_user_section"
                 class="added-user-container added-user-root-class-name"
@@ -131,7 +156,7 @@ $(document).ready(function() {
                         id="username_container"
                         class="added-user-username-container"
                     >
-                        <span id="username_text"><span>`+$("#username_input").val()+`</span></span>
+                        <span class="username_text"><span>`+$("#username_input").val()+`</span></span>
                     </div>
                     <div id="trash_button" class="added-user-container2 button">
                         <svg
@@ -162,8 +187,17 @@ $(document).ready(function() {
     });
 
     // view profiles
-    $(".search-button-container2").click(function() {
-        if (addedPlayers) window.location.href = "comparison-page.html";
+    // TODO: pass player names as queries
+    $(".search-button-container1").click(function() {
+        // queryString = "player1=name&player2=name2"
+        var queryString = "";
+        $(".username_text").each( (index,element) => {
+            queryString += "player" + index + "=" + $(element).children().text() + "&";
+        })
+        // remove last "&"
+        queryString = queryString.slice(0,-1);
+
+        if (addedPlayers) window.location.href = "comparison-page.html?" + queryString;
         else alert("Please add a player");
     });
 })
