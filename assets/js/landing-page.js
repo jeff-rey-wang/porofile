@@ -102,12 +102,23 @@ function autocomplete(inp, arr) {
     });
 }
 
-
 $(document).ready(function() {
+    // region onclick
+    $(".search-user-dropdown-toggle").click(function() {
+        if (!$(".search-user-dropdown-list").hasClass("expanded")) {
+            $(".search-user-dropdown-list").addClass("expanded");
+            $(".search-user-dropdown-list").css("display", "flex");
+        } else {
+            $(".search-user-dropdown-list").removeClass("expanded");
+            $(".search-user-dropdown-list").css("display", "none");
+        }
+    });
+
     // select region
     $(".region-option").click(function() {
-        // alert($(this).children().text());
         $(".search-user-text").text($(this).children().text());
+        $(".search-user-dropdown-list").removeClass("expanded");
+        $(".search-user-dropdown-list").css("display", "none");
     });
 
     // add (region, username) pair
@@ -168,7 +179,7 @@ $(document).ready(function() {
     // view profiles
     // TODO: pass player names as queries
     $(".search-button-container2").click(function() {
-        if (addedPlayers) window.location.href = "comparison-page.html";
+        if (addedPlayers) window.location.href = "comparison-page.html?player=Tyv";
         else alert("Please add a player");
     });
 })

@@ -44,13 +44,10 @@
       }
     </style>
     <style data-section-id="dropdown">
-      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+      /* [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
         display: flex;
-      }
-
-      [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
-        transform: rotate(90deg);
-      }
+      } */
+      
     </style>
     <link rel="stylesheet" href="./style.css" />
     <script src="assets/js/jquery-3.6.1.min.js"></script>
@@ -96,6 +93,7 @@
                   <div
                     data-thq="thq-dropdown-arrow"
                     class="search-user-dropdown-arrow"
+                    style="transform: rotate(90deg);"
                   >
                     <svg viewBox="0 0 1024 1024" class="search-user-icon">
                       <path d="M426 726v-428l214 214z"></path>
@@ -198,78 +196,6 @@
     </div>
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
     <script>
-      window.onload = () => {
-        const runAllScripts = () => {
-          initializeAllSliders();
-        };
-
-        const listenForUrlChanges = () => {
-          let url = location.href;
-          document.body.addEventListener(
-            "click",
-            () => {
-              requestAnimationFrame(() => {
-                if (url !== location.href) {
-                  runAllScripts();
-                  url = location.href;
-                }
-              });
-            },
-            true
-          );
-        };
-
-        const initializeAllSliders = () => {
-          const allSliders = document.querySelectorAll('[data-type="slider"]');
-          allSliders.forEach((carrousel) => {
-            initializeSlider(carrousel);
-          });
-        };
-
-        const initializeSlider = (carrousel) => {
-          let currentSlide = 0;
-
-          const slides = carrousel.querySelectorAll('[data-type="slide"]');
-          const nextSlideBtns = carrousel.querySelectorAll(
-            '[data-action="nextSlide"]'
-          );
-          const previousSlideBtns = carrousel.querySelectorAll(
-            '[data-action="previousSlide"]'
-          );
-
-          const changeSlide = (slideIndex, action) => {
-            currentSlide = slideIndex;
-
-            switch (action) {
-              case "next":
-                slideIndex === slides.length - 1
-                  ? (currentSlide = 0)
-                  : currentSlide++;
-                break;
-              case "previous":
-                slideIndex === 0
-                  ? (currentSlide = slides.length - 1)
-                  : currentSlide--;
-            }
-
-            carrousel.style.transform = `translateX(${-100 * currentSlide}%)`;
-          };
-
-          previousSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "previous")
-            );
-          });
-
-          nextSlideBtns.forEach((btn) => {
-            btn.addEventListener("click", () =>
-              changeSlide(currentSlide, "next")
-            );
-          });
-        };
-        runAllScripts();
-      };
-
       // autocomplete for searching a user
       autocomplete(document.getElementById("username_input"), players);
     </script>
