@@ -121,10 +121,31 @@ function populate_col(username) {
         6.6,
         8.7,
         1.55,
-        "assets/imgs/Seraphine"
+        "assets/imgs/Seraphine_OriginalCircle.png",
+        "assets/imgs/Seraphine_OriginalCentered.png"
       ),
-      champStats("Jinx", 27, 44, 3.4, 7.0, 6.9, 1.47),
-      champStats("Ashe", 22, 45, 1.0, 6.5, 9.7, 1.63),
+      champStats(
+        "Jinx",
+        27,
+        44,
+        3.4,
+        7.0,
+        6.9,
+        1.47,
+        "assets/imgs/Jinx_OriginalCircle.png",
+        "assets/imgs/Jinx_OriginalCentered.png"
+      ),
+      champStats(
+        "Ashe",
+        22,
+        45,
+        1.0,
+        6.5,
+        9.7,
+        1.63,
+        "assets/imgs/Ashe_OriginalCircle.png",
+        "assets/imgs/Ashe_OriginalCentered.png"
+      ),
     ];
     playedWith = [player("Tyv", 56, 18), player("Boxerme", 50, 6)];
   } else if (username == "qotato") {
@@ -151,9 +172,39 @@ function populate_col(username) {
     tags = [Tags.LateBloomer, Tags.ReadyToRumble, Tags.HungryForBlood];
     positions = ["mid", "top"];
     champs = [
-      champStats("Galio", 10, 40, 4.5, 7.0, 8.2, 1.8),
-      champStats("Shen", 8, 75, 4.0, 3.0, 8.4, 4.1),
-      champStats("Xerath", 8, 25, 8.9, 6.0, 9.8, 3.1),
+      champStats(
+        "Galio",
+        10,
+        40,
+        4.5,
+        7.0,
+        8.2,
+        1.8,
+        "assets/imgs/Galio_OriginalCircle.png",
+        "assets/imgs/Galio_OriginalCentered.png"
+      ),
+      champStats(
+        "Shen",
+        8,
+        75,
+        4.0,
+        3.0,
+        8.4,
+        4.1,
+        "assets/imgs/Shen_OriginalCircle.png",
+        "assets/imgs/Shen_OriginalCentered.png"
+      ),
+      champStats(
+        "Xerath",
+        8,
+        25,
+        8.9,
+        6.0,
+        9.8,
+        3.1,
+        "assets/imgs/Xerath_OriginalCircle.png",
+        "assets/imgs/Xerath_OriginalCentered.png"
+      ),
     ];
     playedWith = [
       player("jasminebrew", 53, 17),
@@ -164,9 +215,39 @@ function populate_col(username) {
     tags = [Tags.EarlyWarder, Tags.VisionFocused, Tags.Responsible];
     positions = ["bot", "sup"];
     champs = [
-      champStats("Zyra", 61, 40, 3.3, 6.3, 11.5, 2.33),
-      champStats("Yuumi", 52, 75, 2.4, 4.5, 17.0, 4.3),
-      champStats("Miss Fortune", 39, 25, 4.8, 5.9, 8.2, 2.19),
+      champStats(
+        "Zyra",
+        61,
+        40,
+        3.3,
+        6.3,
+        11.5,
+        2.33,
+        "assets/imgs/Zyra_OriginalCircle.png",
+        "assets/imgs/Zyra_OriginalCentered.png"
+      ),
+      champStats(
+        "Yuumi",
+        52,
+        75,
+        2.4,
+        4.5,
+        17.0,
+        4.3,
+        "assets/imgs/Yuumi_OriginalCircle.png",
+        "assets/imgs/Yuumi_OriginalCentered.png"
+      ),
+      champStats(
+        "Miss Fortune",
+        39,
+        25,
+        4.8,
+        5.9,
+        8.2,
+        2.19,
+        "assets/imgs/Miss_Fortune_OriginalCircle.png",
+        "assets/imgs/Miss_Fortune_OriginalCentered.png"
+      ),
     ];
     playedWith = [player("qotato", 50, 12), player("Tyv", 50, 4)];
   } else if (username == "Tyv") {
@@ -174,9 +255,39 @@ function populate_col(username) {
     tags = [Tags.DeadlyDuelist, Tags.SolidLaner, Tags.UltimatePredator];
     positions = ["mid", "bot"];
     champs = [
-      champStats("Zed", 193, 64, 9.6, 4.8, 5.2, 3.1),
-      champStats("Sylas", 77, 58, 8.1, 7.3, 6.9, 1.9),
-      champStats("Zoe", 73, 50, 6.8, 4.4, 7.6, 3.25),
+      champStats(
+        "Zed",
+        193,
+        64,
+        9.6,
+        4.8,
+        5.2,
+        3.1,
+        "assets/imgs/Zed_OriginalCircle.png",
+        "assets/imgs/Zed_OriginalCentered.png"
+      ),
+      champStats(
+        "Sylas",
+        77,
+        58,
+        8.1,
+        7.3,
+        6.9,
+        1.9,
+        "assets/imgs/Sylas_OriginalCircle.png",
+        "assets/imgs/Sylas_OriginalCentered.png"
+      ),
+      champStats(
+        "Zoe",
+        73,
+        50,
+        6.8,
+        4.4,
+        7.6,
+        3.25,
+        "assets/imgs/Zoe_OriginalCircle.png",
+        "assets/imgs/Zoe_OriginalCentered.png"
+      ),
     ];
     playedWith = [
       player("jasminebrew", 43, 7),
