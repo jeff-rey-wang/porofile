@@ -23,7 +23,7 @@ const Tags = {
   EarlyWarder: [
     "Early Warder",
     rgba(71, 204, 66, 255),
-    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+    "This player has placed their first ward of the game during the first 3 minutes across 96.12% of their matches. It may be difficult to gank them early on.",
   ],
   VisionFocused: [
     "Vision Focused",
@@ -33,22 +33,27 @@ const Tags = {
   SolidLaner: [
     "Solid Laner",
     rgba(71, 204, 66, 255),
-    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+    "This player averages 4.48 CS difference by 15 minutes. They won't dominate the early game but they won't be horrible either.",
   ],
   DeadlyDuelist: [
     "Deadly Duelist",
     rgba(71, 204, 66, 255),
-    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+    "Wow, this player has a 60.14% win rate in 1v1 situations! Consider avoiding them unless you have a friend nearby to help.",
   ],
   UltimatePredator: [
     "Ultimate Predator",
     rgba(71, 204, 66, 255),
-    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+    "We detect you as the Ultimate Predator because of your commitment to stalking prey throughout the game.",
+  ],
+  Responsible: [
+    "Responsible",
+    rgba(71, 204, 66, 255),
+    "We detect you as a Responsible player because of your commitment to overall team performance. You spend your money placing wards for your team when you have the gold to spare instead of hoarding it.",
   ],
   Pacifist: [
     "Pacfist",
     rgba(238, 183, 12, 255),
-    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+    "This player only averages 1.33 kills + assists by 15 minutes so expect them to play defensively.",
   ],
   HungryForBlood: [
     "Hungry for Blood",
@@ -63,21 +68,14 @@ const Tags = {
   Visionless: [
     "Visionless",
     rgba(221, 38, 112, 255),
-    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
-  ],
-  RiskBlind: [
-    "Risk Blind",
-    rgba(221, 38, 112, 255),
-    "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
+    "This player only averages 0.24 vision score per minute. They hardly contribute to helping their team control vision at all.",
   ],
 };
 
 function populate_col(username) {
   if (username == "jasminebrew") {
     // no solo, B2 flex
-    //Escapist - green
-    //Pacifist - yellow
-    //Visionless - red
+    tags = { Escapist, Visionless, Pacifist };
     //sup 25% vs 100% opacity on no-sup vs sup
     //seraphine 34 - 50%wr - 1.5/6.6/8.7 - 1.55kda
     //jinx 27 - 44%wr - 3.4/7.0/6.9 - 1.47kda
@@ -88,6 +86,8 @@ function populate_col(username) {
     //Midgame Master - green
     //Lane tyrant - green
     //Late bloomer - green
+    tags = { MidgameMaster, LaneTyrant, LateBloomer };
+
     //top, bot
     //teemo 15 - 53%wr - 6.3/5.7/5.9 - 2.1kda
     //samira 11 - 36%wr - 8.3/5.1/5.1 - 2.6kda
@@ -107,7 +107,7 @@ function populate_col(username) {
     // G2 solo, no flex
     //Early Warder - green
     //Vision focused - green
-    //Risk blind - red
+    //Responsible - green
     // bot, sup
     // zyra 61 - 62wr 3.3/6.3/11.5 - 2.33kda
     // yuumi 52 - 56wr 2.4/4.5/17.0 - 4.3kda
