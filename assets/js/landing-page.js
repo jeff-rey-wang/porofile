@@ -27,7 +27,6 @@ function autocomplete(inp, arr) {
         list.setAttribute("id", this.id + "-autocomplete-list");
         list.setAttribute("class", "autocomplete-items");
         // append autocomplete DIV to form DIV
-        // this.parentNode.appendChild(list);
         document.getElementById("search_user_section").appendChild(list);
         // loop existing usernames
         for (i = 0; i < arr.length; i++) {
@@ -164,6 +163,7 @@ $(document).ready(function() {
 
     // view profiles
     $(".search-button-container2").click(function() {
-        window.location.href = "comparison-page.html";
+        if (addedPlayers) window.location.href = "comparison-page.html";
+        else alert("Please add a player");
     });
 })
