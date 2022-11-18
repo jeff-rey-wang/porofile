@@ -17,3 +17,9 @@ $('#rpw_user2_container').click(()=>{
     }
     
 })
+
+$(document).ready(function(){
+    $(".region-option").click(function(){
+        $(".add-new-profile-popup-text02").text($(this).children().text());
+    });
+})
