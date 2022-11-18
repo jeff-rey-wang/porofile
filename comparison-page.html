@@ -535,9 +535,13 @@
                     id="rpw_users_container"
                     class="recenty-played-with-container01"
                   >
+                  <button
+                    type="button"
+                    onclick="recentlyPlayed()"
+                  >
                     <div
                       id="rpw_user1_container"
-                      class="recenty-played-with-container02"
+                      class="recenty-played-with-container02 button"
                     >
                       <div
                         id="rpw_user1_name_container"
@@ -568,9 +572,14 @@
                         </span>
                       </div>
                     </div>
+                    </button>
+                    <button
+                    type="button"
+                    onclick="recentlyPlayed()"
+                  >
                     <div
                       id="rpw_user2_container"
-                      class="recenty-played-with-container06"
+                      class="recenty-played-with-container06 button"
                     >
                       <div
                         id="rpw_user2_name_container"
@@ -601,6 +610,7 @@
                         </span>
                       </div>
                     </div>
+                  </button>
                   </div>
                   <div
                     id="rpw_right_button"
@@ -793,7 +803,7 @@
     <script src="assets/js/comparison-page.js"></script>
     <script src="assets/js/appendProfile.js"></script>
     <script src="assets/js/addUserPopup.js"></script>
-    
+    <script src="assets/js/recentlyPlayed.js"></script>
     <script>
       window.onload = () => {
         const runAllScripts = () => {
