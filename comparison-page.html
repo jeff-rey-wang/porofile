@@ -25,7 +25,7 @@
         letter-spacing: normal;
         line-height: 1.1;
         color: var(--dl-color-grays-dark100);
-        background-color: var(--dl-color-grays-white100);
+        background-color: #114b5fff;
 
       }
     </style>
@@ -53,6 +53,19 @@
         [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
           transform: rotate(90deg);
         }
+    </style>
+    <link rel="stylesheet" href="assets/css/autocomplete.css"/>
+    <style>
+      .autocomplete-items {
+        position: absolute;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        top: 63.5%;
+        left: 31.5%;
+        right: 0;
+        width: 40%;
+      }
     </style>
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -665,7 +678,7 @@
             >
               <button
                   type="button"
-                  onclick="remove_popup()"
+
               >
                 <div
                   id="add_new_x_button"
@@ -676,17 +689,12 @@
                   </span>
                 </div>
               </button>
-              <script>
-                function remove_popup(){
-                  document.getElementById("add_new_profile_box").style.display = "none"
-                  document.getElementById("overlay").style.display = "none"
-                }
-              </script>
+
               <h1 id="add_profile_title" class="add-new-profile-popup-text01">
                 <span>Add New User Profile</span>
               </h1>
             </div>
-            <div class="add-new-profile-popup-container3">
+            <div class="add-new-profile-popup-container3" id="search_user_section">
               <div
                 data-thq="thq-dropdown"
                 class="add-new-profile-popup-thq-dropdown list-item"
@@ -778,14 +786,14 @@
                 placeholder="Username..."
                 class="add-new-profile-popup-textinput input"
               />
+              <button
+                  type="button"
+
+                >
               <div
                 id="add_new_user_button"
                 class="add-new-profile-popup-button button"
               >
-              <button
-                  type="button"
-                  onclick="remove_popup()"
-                >
                 <div class="add-add-button">ADD
                   <path
                     d="M658.286 475.429c0-141.143-114.857-256-256-256s-256 114.857-256 256 114.857 256 256 256 256-114.857 256-256zM950.857 950.857c0 40-33.143 73.143-73.143 73.143-19.429 0-38.286-8-51.429-21.714l-196-195.429c-66.857 46.286-146.857 70.857-228 70.857-222.286 0-402.286-180-402.286-402.286s180-402.286 402.286-402.286 402.286 180 402.286 402.286c0 81.143-24.571 161.143-70.857 228l196 196c13.143 13.143 21.143 32 21.143 51.429z"
@@ -886,6 +894,105 @@
           appendProfile(param);
         };
       }
+
+      // hardcoded username data
+      var players = ["Tyv", "Boxerme", "jasminebrew", "qotato", "ElegantDisaster"];
+
+      // autocomplete function
+      // inp : text field element
+      // arr : array of possible autocompleted values
+      function autocomplete(inp, arr) {
+          // for highlighting selected elements
+          var currentFocus;
+          // event listener for input
+          inp.addEventListener("input", function(e) {
+              var list, match, i, val = this.value;
+
+              // close existing autocomplete
+              closeAllLists();
+              if (!val) { return false; }
+              currentFocus = -1;
+              
+              // new DIV for displaying results
+              list = document.createElement("DIV");
+              list.setAttribute("id", this.id + "-autocomplete-list");
+              list.setAttribute("class", "autocomplete-items");
+              // append autocomplete DIV to form DIV
+              document.getElementById("search_user_section").appendChild(list);
+              // loop existing usernames
+              for (i = 0; i < arr.length; i++) {
+                  // match input string to data
+                  if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                      // create new DIV for matches
+                      match = document.createElement("DIV");
+                      match.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                      match.innerHTML += arr[i].substr(val.length);
+                      // hidden input field for storing selected player's value
+                      match.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                      // event listener for clicking on username
+                      match.addEventListener("click", function(e) {
+                          // insert value to text field
+                          inp.value = this.getElementsByTagName("input")[0].value;
+                          // close list of autocomplete values
+                          closeAllLists();
+                      });
+                      list.appendChild(match);
+                  }
+              }
+          });
+          // event listener for keypresses
+          inp.addEventListener("keydown", function(e) {
+              var x = document.getElementById(this.id + "autocomplete-list");
+              if (x) x = x.getElementsByTagName("div");
+              if (e.keyCode == 40) {
+                  // DOWN = increase the currentFocus variable
+                  currentFocus++;
+                  // highlight current element
+                  addActive(x);
+              } else if (e.keyCode == 38) { //up
+                  // UP = decrease the currentFocus variable
+                  currentFocus--;
+                  // highlight current element
+                  addActive(x);
+              } else if (e.keyCode == 13) {
+                  // If the ENTER key is pressed, prevent the form from being submitted, simulate a click on "active"
+                  e.preventDefault();
+                  if (currentFocus > -1 && x) {
+                      x[currentFocus].click();
+                  }
+              }
+          });
+          // set "active" for highlighting current focus
+          function addActive(x) {
+              if (!x) return false;
+              removeActive(x);
+              if (currentFocus >= x.length) currentFocus = 0;
+              if (currentFocus < 0) currentFocus = (x.length - 1);
+              // add class "autocomplete-active"
+              x[currentFocus].classList.add("autocomplete-active");
+          }
+          // remove "active" 
+          function removeActive(x) {
+          for (var i = 0; i < x.length; i++) {
+                  x[i].classList.remove("autocomplete-active");
+              }
+          }
+          // close all list except for the one passed as argument
+          function closeAllLists(elmnt) {
+              var x = document.getElementsByClassName("autocomplete-items");
+              for (var i = 0; i < x.length; i++) {
+                  if (elmnt != x[i] && elmnt != inp) {
+                      x[i].parentNode.removeChild(x[i]);
+                  }
+              }
+          }
+          // close list when clicked away
+          document.addEventListener("click", function (e) {
+              closeAllLists(e.target);
+          });
+      }
+      // autocomplete for searching a user
+      autocomplete(document.getElementById("add_new_user_input"), players);
     </script>
   </body>
 </html>

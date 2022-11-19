@@ -130,7 +130,7 @@ $(document).ready(function() {
         if ($("#username_input").val() == "") { alert("Please enter a valid username"); return; }
         // check if user exists
         if (!players.includes($("#username_input").val())) { 
-            alert("Username not found\n\nFor purposes of this demo, please use any of the following:\n\t Tyv \n\t Boxerme \n\t jasminebrew \n\t qotato \n\t ElegantDisaster ");
+            alert("Username not found\n\nFor the purpose of this demo, please use any of the following:\n\t Tyv \n\t Boxerme \n\t jasminebrew \n\t qotato \n\t ElegantDisaster ");
             $("#username_input").val("");
             return; 
         }
