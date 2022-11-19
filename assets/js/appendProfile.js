@@ -9,6 +9,13 @@ const appendProfile = (username) => {
     $('#profile_placeholder').before(element);
 }
 
+function getRankPhotoURLFromString(str) {
+    if (str.startsWith('Unranked')) return ''
+    if (str.startsWith('B')) return 'assets/imgs/Bronze.png'
+    if (str.startsWith('G')) return 'assets/imgs/Gold.png'
+    if (str.startsWith('D')) return 'assets/imgs/Diamond.png'
+
+}
 
 const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) => {
 
@@ -23,6 +30,7 @@ const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) =>
     if (positions[0] == Roles.Mid || positions[1] == Roles.Mid) mid_opacity = 1
     if (positions[0] == Roles.Bot || positions[1] == Roles.Bot) bot_opacity = 1
     if (positions[0] == Roles.Sup || positions[1] == Roles.Sup) sup_opacity = 1
+
 
     return `<div id = "a_user_profile" class="profile-container profile-root-class-name">
     <div id="profile_banner_container" class="profile-banner">
@@ -99,6 +107,58 @@ const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) =>
           
       </div>
     </div>
+    <div id="profile_ranks_container" class="profile-ranks">
+    <div
+      class="rank-carousel-container rank-carousel-root-class-name"
+    >
+        
+        
+        <div class="rank-carousel-ranked-contents">
+            <head>
+                <style>
+                    .row{
+                        box-sizing: border-box;
+                    }
+                    /* Set additional styling options for the columns*/
+                    .column {
+                        float: left;
+                        width: 50%;
+                        text-align: center;
+                    }
+                    .row .column img{
+                      display: inline-block;
+                    }
+                    .row:after {
+                        content: "";
+                        display: table;
+                        clear: both;
+                    }
+                </style>
+            </head>
+            <div class="row">
+                <div class="column">
+                    Ranked Solo
+                    <img id="gold_icon"
+                         alt="Gold Division Icon"
+                         src="url(${ranks})" 
+                         width="1000" height="1000"
+                         class="role-list-image"/>
+                    <p>${ranks[0]}</p>
+                </div>
+                <div class="column">
+                    Ranked Flex
+                    <img id="unranked_icon"
+                         alt="Unranked Icon"
+                         src="url(${})"
+                         class="role-list-image"/>
+                    <p>${ranks[1]}</p>
+                </div>
+            </div>
+        </div>
+      
+        
+    </div>
+  </div>
     <div id="profile_role_container" class="profile-container1">
       <div
         id="profile_rolelist"

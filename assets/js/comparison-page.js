@@ -114,7 +114,7 @@ function populate_col(username) {
         "assets/imgs/jasminebrew.png",
         "assets/imgs/Seraphine_OriginalCentered.png",
       ],
-      ranks: ["none", "B2"],
+      ranks: ["Unranked", "B2"],
       tags: [Tags.Escapist, Tags.Visionless, Tags.Pacifist],
       positions: [Roles.Sup, null],
       champs: [
@@ -162,7 +162,7 @@ function populate_col(username) {
         "assets/imgs/Teemo_OriginalCentered.png",
       ],
       //G3 solo, no flex
-      ranks: ["G3", "none"],
+      ranks: ["G3", "Unranked"],
       //Midgame Master - green
       //Lane tyrant - green
       //Late bloomer - green
@@ -217,7 +217,7 @@ function populate_col(username) {
         "assets/imgs/Boxerme.png",
         "assets/imgs/Galio_OriginalCentered.png",
       ],
-      ranks: ["none", "B1"],
+      ranks: ["Unranked", "B1"],
       tags: [Tags.LateBloomer, Tags.ReadyToRumble, Tags.HungryForBlood],
       positions: [Roles.Mid, Roles.Bot],
       champs: [
@@ -267,7 +267,7 @@ function populate_col(username) {
         "assets/imgs/ElegantDisaster.png",
         "assets/imgs/Zyra_OriginalCentered.png",
       ],
-      ranks: ["G2", "none"],
+      ranks: ["G2", "Unranked"],
       tags: [Tags.EarlyWarder, Tags.VisionFocused, Tags.Responsible],
       positions: [Roles.Bot, Roles.Sup],
       champs: [
@@ -314,7 +314,7 @@ function populate_col(username) {
         "assets/imgs/Tyv.png",
         "assets/imgs/Zed_OriginalCentered.png",
       ],
-      ranks: ["D4", "none"],
+      ranks: ["D4", "Unranked"],
       tags: [Tags.DeadlyDuelist, Tags.SolidLaner, Tags.UltimatePredator],
       positions: [Roles.Mid, Roles.Bot],
       champs: [
