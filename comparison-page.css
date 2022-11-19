@@ -186,6 +186,7 @@
   display: flex;
   position: relative;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
 }
 .rank-carousel-left-button {
