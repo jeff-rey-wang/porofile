@@ -639,6 +639,7 @@
   background: grey;
 }
 .recenty-played-with-container01 {
+  width: 100%;
   flex: 0 0 auto;
   height: 100%;
   display: flex;
