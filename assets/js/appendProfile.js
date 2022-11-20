@@ -433,7 +433,7 @@ const createDiv = (
                 id="champ3_WR_text"
                 class="most-played-champs-text11"
               >
-                <span>${champs[2].winrate} %</span>
+                <span>${champs[2].winrate}%</span>
               </span>
             </div>
             <div
