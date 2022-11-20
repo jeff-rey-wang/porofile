@@ -40,7 +40,7 @@ const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) =>
     var rank2 = getRankPhotoURLFromString(ranks[1]);
 
     return `
-    <div id = "a_user_profile" class="profile-container profile-root-class-name">
+    <div id = "a_user_profile_${intro[2]}" class="profile-container profile-root-class-name">
     <div id="profile_banner_container" class="profile-banner">
       <div
         id="profile_banner"
@@ -66,7 +66,7 @@ const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) =>
         </button>
         <script>
           function remove_profile(){
-            document.getElementById("a_user_profile").style.display = "none"
+            document.getElementById("a_user_profile_${intro[2]}").style.display = "none"
           }
         </script>
         <div id="banner_iconname_container" class="banner-container2">
