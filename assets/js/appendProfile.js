@@ -110,17 +110,23 @@ const createDiv = (
         id="profile_taglist"
         class="taglist-container taglist-root-class-name"
       >
-        <div id="taglist_tag1_container" class="taglist-tag1" data-tooltip="${tags[0][2]}" style="background-color: ${tags[0][1]};">
+        <div id="taglist_tag1_container" class="taglist-tag1" data-tooltip="${
+          tags[0][2]
+        }" style="background-color: ${tags[0][1]};">
           <span id="taglist_tag1_text" class="taglist-tag1text">
             <span>${tags[0][0]}</span>
           </span>
         </div>
-        <div id="taglist_tag2_container" class="taglist-tag2" data-tooltip="${tags[1][2]}" style="background-color: ${tags[1][1]};">
+        <div id="taglist_tag2_container" class="taglist-tag2" data-tooltip="${
+          tags[1][2]
+        }" style="background-color: ${tags[1][1]};">
           <span id="taglist_tag2_text" class="taglist-tag2text">
             <span>${tags[1][0]}</span>
           </span>
         </div>
-        <div id="taglist_tag3_container" class="taglist-tag3" data-tooltip="${tags[2][2]}" style="background-color: ${tags[2][1]};">
+        <div id="taglist_tag3_container" class="taglist-tag3" data-tooltip="${
+          tags[2][2]
+        }" style="background-color: ${tags[2][1]};">
           <span id="taglist_tag3_text" class="taglist-tag3text">
             <span>${tags[2][0]}</span>
           </span>
@@ -236,7 +242,9 @@ const createDiv = (
         <div
           id="champs_1_container"
           class="most-played-champs-container01"
-          style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('${champs[0].bannerURL}');"
+          style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('${
+            champs[0].bannerURL
+          }');"
 
         >
           <div
@@ -310,7 +318,9 @@ const createDiv = (
                 id="champ1_fullKDA_text"
                 class="most-played-champs-text05"
               >
-                <span>${champs[0].kills} / ${champs[0].deaths} / ${champs[0].assists}</span>
+                <span>${champs[0].kills} / ${champs[0].deaths} / ${
+    champs[0].assists
+  }</span>
               </span>
             </div>
           </div>
@@ -318,7 +328,9 @@ const createDiv = (
         <div
           id="champs_2_container"
           class="most-played-champs-container11"
-          style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('${champs[1].bannerURL}');"
+          style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('${
+            champs[1].bannerURL
+          }');"
         >
           <div
             id="champ2_WRandgames_container"
@@ -391,7 +403,9 @@ const createDiv = (
                 id="champ2_fullKDA_text"
                 class="most-played-champs-text10"
               >
-                <span>${champs[1].kills} / ${champs[1].deaths} / ${champs[1].assists}</span>
+                <span>${champs[1].kills} / ${champs[1].deaths} / ${
+    champs[1].assists
+  }</span>
               </span>
             </div>
           </div>
@@ -399,7 +413,9 @@ const createDiv = (
         <div
           id="champs_3_container"
           class="most-played-champs-container21"
-          style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('${champs[2].bannerURL}');"
+          style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('${
+            champs[2].bannerURL
+          }');"
         >
           <div
             id="champ3_WRandgames_container"
@@ -472,7 +488,9 @@ const createDiv = (
                 id="champ3_fullKDA_text"
                 class="most-played-champs-text15"
               >
-                <span>${champs[2].kills} / ${champs[2].deaths} / ${champs[2].assists}</span>
+                <span>${champs[2].kills} / ${champs[2].deaths} / ${
+    champs[2].assists
+  }</span>
               </span>
             </div>
           </div>
@@ -507,7 +525,9 @@ const createDiv = (
                 id="rpw_user1_name_container"
                 class="recenty-played-with-container03"
               >
-                <span id="rpw_user1_name_text"><span>${playedWith[0].username}</span></span>
+                <span id="rpw_user1_name_text"><span>${
+                  playedWith[0].username
+                }</span></span>
               </div>
               <div
                 id="rpw_user1_wr_container"
@@ -528,7 +548,7 @@ const createDiv = (
                   id="rpw_user1_numgames_text"
                   class="recenty-played-with-text4"
                 >
-                  <span>${playedWith[0].gamesPlayed} games</span>
+                  <span>${playedWith[0].gamesPlayed + " "}games</span>
                 </span>
               </div>
             </div>
@@ -545,7 +565,9 @@ const createDiv = (
                 id="rpw_user2_name_container"
                 class="recenty-played-with-container07"
               >
-                <span id="rpw_user2_name_text"><span>${playedWith[1].username}</span></span>
+                <span id="rpw_user2_name_text"><span>${
+                  playedWith[1].username
+                }</span></span>
               </div>
               <div
                 id="rpw_user2_wr_container"
@@ -566,7 +588,7 @@ const createDiv = (
                   id="rpw_user2_numgames_text"
                   class="recenty-played-with-text7"
                 >
-                  <span>${playedWith[1].gamesPlayed} games</span>
+                  <span>${playedWith[1].gamesPlayed + " "} games</span>
                 </span>
               </div>
             </div>
