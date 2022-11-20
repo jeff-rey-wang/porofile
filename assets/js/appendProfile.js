@@ -58,13 +58,8 @@ const createDiv = (
   var rank1 = getRankPhotoURLFromString(ranks[0]);
   var rank2 = getRankPhotoURLFromString(ranks[1]);
 
-<<<<<<< HEAD
     return `
     <div id = "a_user_profile_${intro[2]}" class="profile-container profile-root-class-name">
-=======
-  return `
-    <div id = "a_user_profile" class="profile-container profile-root-class-name">
->>>>>>> 068e034a38cb2bdc3a78f835d8cd2cea3dd7baf2
     <div id="profile_banner_container" class="profile-banner">
       <div
         id="profile_banner"
