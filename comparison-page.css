@@ -1245,8 +1245,10 @@
   
   /* customizable */
   background: yellow;
-  margin-top: -50px;
-  margin-left: 20px;    
+  margin-top: -125px;
+  margin-left: -100px;
+  margin-right: -100px;    
+  z-index: 100;
 }
 
 [data-tooltip]:not([data-tooltip-persistent]):before {
