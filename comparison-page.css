@@ -358,8 +358,9 @@
   align-items: flex-end;
   justify-content: center;
 }
-.most-played-champs-text03 {
+.most-played-champs-text03, .most-played-champs-text08, .most-played-champs-text13 {
   font-size: 12px;
+  margin-bottom: 6%;
 }
 .most-played-champs-container08 {
   flex: 0 0 auto;
@@ -776,6 +777,7 @@
   height: 50px;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
 }
 .profile-ranks {
