@@ -209,7 +209,7 @@
 .rank-carousel-ranked-contents {
   flex: 0 0 auto;
   width: 225px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
+  background-color: rgba(156, 190, 198, 0.75);
   height: 100px;
   display: flex;
   align-items: flex-start;
