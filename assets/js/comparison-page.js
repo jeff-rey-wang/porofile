@@ -26,12 +26,12 @@ const Tags = {
   ],
   VisionFocused: [
     "Vision Focused",
-   " rgba(71, 204, 66, 255)",
+    " rgba(71, 204, 66, 255)",
     "This player averages 1.77 vision score per minute. They really prioritize placing and clearing wards.",
   ],
   SolidLaner: [
     "Solid Laner",
-   " rgba(71, 204, 66, 255)",
+    " rgba(71, 204, 66, 255)",
     "This player averages 4.48 CS difference by 15 minutes. They won't dominate the early game but they won't be horrible either.",
   ],
   DeadlyDuelist: [
@@ -41,7 +41,7 @@ const Tags = {
   ],
   UltimatePredator: [
     "Ultimate Predator",
-   " rgba(71, 204, 66, 255)",
+    " rgba(71, 204, 66, 255)",
     "We detect you as the Ultimate Predator because of your commitment to stalking prey throughout the game.",
   ],
   Responsible: [
@@ -87,7 +87,8 @@ class player {
   }
 }
 class champStats {
-  constructor(champName,
+  constructor(
+    champName,
     gamesPlayed,
     winrate,
     kills,
@@ -95,7 +96,8 @@ class champStats {
     assists,
     kda,
     picture,
-    banner) {
+    banner
+  ) {
     this.champName = champName;
     this.gamesPlayed = gamesPlayed;
     this.winrate = winrate;
@@ -209,8 +211,8 @@ function populate_col(username) {
           "assets/imgs/Fiora_OriginalCentered.png"
         ),
       ],
-      //Boxerme 70wr 10 games, ElegantDisaster 66wr 6 games
-      playedWith: [new player("Boxerme", 70, 10),new player("ElegantDisaster", 66, 6)],
+      //Boxerme 70wr 10 games, LemonT 66wr 6 games
+      playedWith: [new player("Boxerme", 70, 10), new player("LemonT", 66, 6)],
     };
   } else if (username == "Boxerme") {
     return {
@@ -259,13 +261,13 @@ function populate_col(username) {
       ],
       playedWith: [
         new player("jasminebrew", 53, 17),
-        new player("ElegantDisaster", 55, 13),
+        new player("LemonT", 55, 13),
       ],
     };
-  } else if (username == "ElegantDisaster") {
+  } else if (username == "LemonT") {
     return {
       intro: [
-        "ElegantDisaster",
+        "LemonT",
         "assets/imgs/ElegantDisaster.png",
         "assets/imgs/Zyra_OriginalCentered.png",
       ],
@@ -307,7 +309,7 @@ function populate_col(username) {
           "assets/imgs/Miss_Fortune_OriginalCentered.png"
         ),
       ],
-      playedWith: [new player("qotato", 50, 12),new player("Tyv", 50, 4)],
+      playedWith: [new player("qotato", 50, 12), new player("Tyv", 50, 4)],
     };
   } else if (username == "Tyv") {
     return {
@@ -356,7 +358,7 @@ function populate_col(username) {
       ],
       playedWith: [
         new player("jasminebrew", 43, 7),
-        new player("ElegantDisaster", 50, 4),
+        new player("LemonT", 50, 4),
       ],
     };
   } else {

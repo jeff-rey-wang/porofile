@@ -20,7 +20,7 @@ const appendProfile = (username) => {
 };
 
 function getRankPhotoURLFromString(str) {
-  if (str.startsWith("Unranked")) return "";
+  if (str.startsWith("Unranked")) return "assets/imgs/Unranked.png";
   if (str.startsWith("B")) return "assets/imgs/Bronze.png";
   if (str.startsWith("G")) return "assets/imgs/Gold.png";
   if (str.startsWith("D")) return "assets/imgs/Diamond.png";
@@ -58,8 +58,10 @@ const createDiv = (
   var rank1 = getRankPhotoURLFromString(ranks[0]);
   var rank2 = getRankPhotoURLFromString(ranks[1]);
 
-    return `
-    <div id = "a_user_profile_${intro[2]}" class="profile-container profile-root-class-name">
+  return `
+    <div id = "a_user_profile_${
+      intro[2]
+    }" class="profile-container profile-root-class-name">
     <div id="profile_banner_container" class="profile-banner">
       <div
         id="profile_banner"
@@ -85,7 +87,9 @@ const createDiv = (
         </button>
         <script>
           function remove_profile(){
-            document.getElementById("a_user_profile_${intro[2]}").style.display = "none"
+            document.getElementById("a_user_profile_${
+              intro[2]
+            }").style.display = "none"
           }
         </script>
         <div id="banner_iconname_container" class="banner-container2">
