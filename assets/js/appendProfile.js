@@ -263,7 +263,7 @@ const createDiv = (
                 id="champ1_WR_text"
                 class="most-played-champs-text01"
               >
-                <span>${champs[0].winrate} %</span>
+                <span>${champs[0].winrate}%</span>
               </span>
             </div>
             <div
@@ -348,7 +348,7 @@ const createDiv = (
                 id="champ2_WR_text"
                 class="most-played-champs-text06"
               >
-                <span>${champs[1].winrate} %</span>
+                <span>${champs[1].winrate}%</span>
               </span>
             </div>
             <div
