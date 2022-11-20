@@ -1,45 +1,64 @@
 const appendProfile = (username) => {
+  console.log(username);
+  // fill in content
+  var numProfiles = $(".profile-container profile-root-class-name").length;
+  var { intro, ranks, tags, positions, champs, playedWith } =
+    populate_col(username);
+  console.log(intro, ranks, tags, positions, champs, playedWith);
+  var element = createDiv(
+    numProfiles,
+    intro,
+    ranks,
+    tags,
+    positions,
+    champs,
+    playedWith
+  );
 
-    console.log(username)
-    // fill in content
-    var numProfiles = $('.profile-container profile-root-class-name').length;
-    var {intro, ranks, tags, positions, champs, playedWith} = populate_col(username);
-    console.log(intro, ranks, tags, positions, champs, playedWith)
-    var element = createDiv(numProfiles, intro, ranks, tags, positions, champs, playedWith);
-
-    // append element onto the profile
-    $('#profile_placeholder').before(element);
-}
+  // append element onto the profile
+  $("#profile_placeholder").before(element);
+};
 
 function getRankPhotoURLFromString(str) {
-    if (str.startsWith('Unranked')) return ''
-    if (str.startsWith('B')) return 'assets/imgs/Bronze.png'
-    if (str.startsWith('G')) return 'assets/imgs/Gold.png'
-    if (str.startsWith('D')) return 'assets/imgs/Diamond.png'
-
+  if (str.startsWith("Unranked")) return "";
+  if (str.startsWith("B")) return "assets/imgs/Bronze.png";
+  if (str.startsWith("G")) return "assets/imgs/Gold.png";
+  if (str.startsWith("D")) return "assets/imgs/Diamond.png";
 }
 
-const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) => {
+const createDiv = (
+  number,
+  intro,
+  ranks,
+  tags,
+  positions,
+  champs,
+  playedWith
+) => {
+  var top_opacity = 0.35;
+  var jg_opacity = 0.35;
+  var mid_opacity = 0.35;
+  var bot_opacity = 0.35;
+  var sup_opacity = 0.35;
 
-    var top_opacity = 0.35
-    var jg_opacity = 0.35
-    var mid_opacity = 0.35
-    var bot_opacity = 0.35
-    var sup_opacity = 0.35
+  console.log("poaitiosdna");
+  console.log(positions);
 
-    console.log("poaitiosdna")
-    console.log(positions)
+  if (positions[0][0] == Roles.Top[0] || positions[1][0] == Roles.Top[0])
+    top_opacity = 1;
+  if (positions[0][0] == Roles.Jg[0] || positions[1][0] == Roles.Jg[0])
+    jg_opacity = 1;
+  if (positions[0][0] == Roles.Mid[0] || positions[1][0] == Roles.Mid[0])
+    mid_opacity = 1;
+  if (positions[0][0] == Roles.Bot[0] || positions[1][0] == Roles.Bot[0])
+    bot_opacity = 1;
+  if (positions[0][0] == Roles.Sup[0] || positions[1][0] == Roles.Sup[0])
+    sup_opacity = 1;
 
-    if (positions[0][0] == Roles.Top[0] || positions[1][0] == Roles.Top[0]) top_opacity = 1
-    if (positions[0][0] == Roles.Jg[0] || positions[1][0] == Roles.Jg[0]) jg_opacity = 1
-    if (positions[0][0] == Roles.Mid[0] || positions[1][0] == Roles.Mid[0]) mid_opacity = 1
-    if (positions[0][0] == Roles.Bot[0] || positions[1][0] == Roles.Bot[0]) bot_opacity = 1
-    if (positions[0][0] == Roles.Sup[0] || positions[1][0] == Roles.Sup[0]) sup_opacity = 1
+  var rank1 = getRankPhotoURLFromString(ranks[0]);
+  var rank2 = getRankPhotoURLFromString(ranks[1]);
 
-    var rank1 = getRankPhotoURLFromString(ranks[0]);
-    var rank2 = getRankPhotoURLFromString(ranks[1]);
-
-    return `
+  return `
     <div id = "a_user_profile" class="profile-container profile-root-class-name">
     <div id="profile_banner_container" class="profile-banner">
       <div
@@ -498,7 +517,7 @@ const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) =>
                   id="rpw_user1_wr_text"
                   class="recenty-played-with-text3"
                 >
-                  <span>${playedWith[0].winrate} %</span>
+                  <span>${playedWith[0].winrate}%</span>
                 </span>
               </div>
               <div
@@ -536,7 +555,7 @@ const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) =>
                   id="rpw_user2_wr_text"
                   class="recenty-played-with-text6"
                 >
-                  <span>${playedWith[1].winrate} %</span>
+                  <span>${playedWith[1].winrate}%</span>
                 </span>
               </div>
               <div
@@ -558,8 +577,5 @@ const createDiv = (number, intro, ranks, tags, positions, champs, playedWith) =>
       </div>
     </div>
   </div>
-    `
-
-  
-}
-
+    `;
+};
