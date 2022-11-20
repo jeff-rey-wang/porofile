@@ -60,7 +60,7 @@ const createDiv = (
 
   return `
     <div id = "a_user_profile_${
-      intro[2]
+      intro[0]
     }" class="profile-container profile-root-class-name">
     <div id="profile_banner_container" class="profile-banner">
       <div
@@ -79,18 +79,13 @@ const createDiv = (
       >
         <button
           type="button"
-          onclick="remove_profile()"
+          onclick="removeProfile('${intro[0]}')"
         >
         <div id="banner_x_button" class="banner-container1 button">
           <span id="banner_x_text"><span>X</span></span>
         </div>
         </button>
         <script>
-          function remove_profile(){
-            document.getElementById("a_user_profile_${
-              intro[2]
-            }").style.display = "none"
-          }
         </script>
         <div id="banner_iconname_container" class="banner-container2">
           <div id="banner_picture_container" class="banner-picture">
