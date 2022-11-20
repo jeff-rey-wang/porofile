@@ -117,6 +117,7 @@
 }
 .banner-text1 {
   color: var(--dl-color-grays-white80);
+  text-shadow: -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
 }
 
 .taglist-container {
