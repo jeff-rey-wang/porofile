@@ -118,7 +118,7 @@ function populate_col(username) {
       ],
       ranks: ["Unranked", "B2"],
       tags: [Tags.Escapist, Tags.Visionless, Tags.Pacifist],
-      positions: [Roles.Sup, null],
+      positions: [Roles.Sup, Roles.Sup],
       champs: [
         new champStats(
           "Seraphine",
