@@ -514,7 +514,7 @@ const createDiv = (
           >
           <button
             type="button"
-            
+            onclick="recentlyPlayed('${playedWith[0].username}')"
           >
             <div
               id="rpw_user1_container"
@@ -554,7 +554,7 @@ const createDiv = (
             </button>
             <button
             type="button"
-            
+            onclick="recentlyPlayed('${playedWith[1].username}')"
           >
             <div
               id="rpw_user2_container"
