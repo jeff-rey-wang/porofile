@@ -85,6 +85,7 @@
   padding-bottom: 0px;
   justify-content: center;
   background-color: #f70000;
+  margin-top: 15%;
 }
 .banner-container1:hover {
   background: #a00303;
@@ -102,6 +103,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5px;
 }
 .banner-image {
   width: 50px;
@@ -934,13 +936,13 @@
   margin-left: 15px;
   position: relative;
   border-radius: var(--dl-radius-radius-radius2);
+  margin-top: 50px;
 }
 .add-new-profile-popup-dropdown-toggle {
   fill: #595959;
   color: #595959;
   width: 100%;
   display: inline-flex;
-  margin-top: 50px;
   align-items: center;
   margin-left: 0px;
   padding-top: var(--dl-space-space-halfunit);
