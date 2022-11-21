@@ -1,10 +1,9 @@
 const appendProfile = (username) => {
-  console.log(username);
   // fill in content
-  var numProfiles = $(".profile-container profile-root-class-name").length;
+  var numProfiles = $(".profile-root-class-name").length;
+  if (numProfiles >= 5) return;
   var { intro, ranks, tags, positions, champs, playedWith } =
     populate_col(username);
-  console.log(intro, ranks, tags, positions, champs, playedWith);
   var element = createDiv(
     numProfiles,
     intro,
@@ -17,6 +16,7 @@ const appendProfile = (username) => {
 
   // append element onto the profile
   $("#profile_placeholder").before(element);
+  if (numProfiles >= 4) $("#profile_placeholder").hide();
 };
 
 function getRankPhotoURLFromString(str) {
@@ -40,9 +40,6 @@ const createDiv = (
   var mid_opacity = 0.35;
   var bot_opacity = 0.35;
   var sup_opacity = 0.35;
-
-  console.log("poaitiosdna");
-  console.log(positions);
 
   if (positions[0][0] == Roles.Top[0] || positions[1][0] == Roles.Top[0])
     top_opacity = 1;
