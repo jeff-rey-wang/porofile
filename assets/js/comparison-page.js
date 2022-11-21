@@ -119,7 +119,7 @@ function populate_col(username) {
         "assets/imgs/Seraphine_OriginalCentered.png",
       ],
       ranks: ["Unranked", "B2"],
-      tags: [Tags.Escapist, Tags.Visionless, Tags.Pacifist],
+      tags: [Tags.Escapist, Tags.Pacifist, Tags.Visionless],
       positions: [Roles.Sup, Roles.Sup],
       champs: [
         new champStats(
