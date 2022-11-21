@@ -50,7 +50,7 @@ const Tags = {
     "We detect you as a Responsible player because of your commitment to overall team performance. You spend your money placing wards for your team when you have the gold to spare instead of hoarding it.",
   ],
   Pacifist: [
-    "Pacfist",
+    "Pacifist",
     "rgb(255, 224, 132, 255)",
     "This player only averages 1.33 kills + assists by 15 minutes so expect them to play defensively.",
   ],
