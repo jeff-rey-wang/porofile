@@ -324,7 +324,7 @@ function populate_col(username) {
       champs: [
         new champStats(
           "Zed",
-          193,
+          93,
           64,
           9.6,
           4.8,
