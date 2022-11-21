@@ -1,9 +1,7 @@
 $("#add_new_user_button").click(() => {
   var username = $("#add_new_user_input").val();
-  console.log(username);
   var region = $(".add-new-profile-popup-text02").text();
   var regionregion = region.trim();
-  console.log(regionregion);
   var numProfiles = $(".profile-container profile-root-class-name").length;
   if (
     username.localeCompare("qotato") != 0 &&
