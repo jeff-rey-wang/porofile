@@ -150,7 +150,7 @@
 .taglist-tag1text {
   font-size: 12px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: bold;
 }
 .taglist-tag2 {
   flex: 0 0 auto;
@@ -167,7 +167,7 @@
 .taglist-tag2text {
   font-size: 12px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: bold;
 }
 .taglist-tag3 {
   flex: 0 0 auto;
@@ -184,7 +184,7 @@
 .taglist-tag3text {
   font-size: 12px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .rank-carousel-container {
