@@ -1,3 +1,11 @@
+@font-face {
+  font-family: lol;
+  src: url(assets/fonts/Spiegel_TT_Regular.ttf);
+}
+html {
+  font-family: lol;
+  color: #FFF;
+}
 .porofile-home-btn-container {
   width: 350px;
   height: 100px;
