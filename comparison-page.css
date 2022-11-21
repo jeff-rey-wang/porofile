@@ -95,6 +95,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  margin-left: -14px;
 }
 .banner-picture {
   width: 100%;
@@ -107,7 +108,7 @@
   width: 50px;
   height: 50px;
   object-fit: cover;
-  border:burlywood;
+  border: burlywood;
   border-style: ridge;
 }
 .banner-username {
@@ -119,7 +120,8 @@
 }
 .banner-text1 {
   color: var(--dl-color-grays-white80);
-  text-shadow: -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
+  text-shadow: -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111,
+    1px 1px 0 #111;
 }
 
 .taglist-container {
@@ -361,7 +363,9 @@
   align-items: flex-end;
   justify-content: center;
 }
-.most-played-champs-text03, .most-played-champs-text08, .most-played-champs-text13 {
+.most-played-champs-text03,
+.most-played-champs-text08,
+.most-played-champs-text13 {
   font-size: 12px;
   margin-bottom: 6%;
 }
@@ -650,7 +654,7 @@
   align-items: flex-start;
   flex-direction: row;
 }
-.recenty-played-with-container01 button{
+.recenty-played-with-container01 button {
   width: 50%;
   padding: 0;
   flex: 0 0 auto;
@@ -1240,24 +1244,24 @@
   content: attr(data-tooltip);
   position: absolute;
   opacity: 0;
-  
+
   /* customizable */
   transition: all 0.15s ease;
   padding: 10px;
   color: #333;
   border-radius: 10px;
-  box-shadow: 2px 2px 1px silver;    
+  box-shadow: 2px 2px 1px silver;
 }
 
 [data-tooltip]:hover:before {
   /* needed - do not touch */
   opacity: 1;
-  
+
   /* customizable */
   background: yellow;
   margin-top: -125px;
   margin-left: -100px;
-  margin-right: -100px;    
+  margin-right: -100px;
   z-index: 100;
 }
 
