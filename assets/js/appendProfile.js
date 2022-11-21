@@ -95,7 +95,7 @@ const createDiv = (
           </div>
           <div id="banner_username_container" class="banner-username">
             <span id="banner_username_text" class="banner-text1">
-              <span>${intro[0]}</span>
+              <span style="font-family: TitlesAndHeaders;">${intro[0]}</span>
             </span>
           </div>
         </div>
@@ -165,7 +165,7 @@ const createDiv = (
                            src="${rank1}" 
                            width="1000" height="1000"
                            class="role-list-image"/>
-                      <p>${ranks[0]}</p>
+                      <p style="font-family: TitlesAndHeaders;">${ranks[0]}</p>
                   </div>
                   <div class="column">
                       Ranked Flex
@@ -173,7 +173,7 @@ const createDiv = (
                            alt="Unranked Icon"
                            src="${rank2}"
                            class="role-list-image"/>
-                      <p>${ranks[1]}</p>
+                      <p style="font-family: TitlesAndHeaders;">${ranks[1]}</p>
                   </div>
               </div>
           </div>
@@ -287,7 +287,7 @@ const createDiv = (
                 id="champ1_charactername_text"
                 class="most-played-champs-text03"
               >
-                <span>${champs[0].champName}</span>
+                <span style="font-family: TitlesAndHeaders;">${champs[0].champName}</span>
               </span>
             </div>
           </div>
@@ -372,7 +372,7 @@ const createDiv = (
                 id="champ2_charactername_text"
                 class="most-played-champs-text08"
               >
-                <span>${champs[1].champName}</span>
+                <span style="font-family: TitlesAndHeaders;">${champs[1].champName}</span>
               </span>
             </div>
           </div>
@@ -457,7 +457,7 @@ const createDiv = (
                 id="champ3_charactername_text"
                 class="most-played-champs-text13"
               >
-                <span>${champs[2].champName}</span>
+                <span style="font-family: TitlesAndHeaders;">${champs[2].champName}</span>
               </span>
             </div>
           </div>
@@ -512,6 +512,7 @@ const createDiv = (
           <button
             type="button"
             onclick="recentlyPlayed('${playedWith[0].username}')"
+            style="font-family: TitlesAndHeaders;"
           >
             <div
               id="rpw_user1_container"
@@ -523,7 +524,8 @@ const createDiv = (
               >
                 <span id="rpw_user1_name_text"><span>${
                   playedWith[0].username
-                }</span></span>
+                }
+               </span></span>
               </div>
               <div
                 id="rpw_user1_wr_container"
@@ -552,6 +554,7 @@ const createDiv = (
             <button
             type="button"
             onclick="recentlyPlayed('${playedWith[1].username}')"
+            style="font-family: TitlesAndHeaders;"
           >
             <div
               id="rpw_user2_container"

@@ -25,6 +25,11 @@
   margin-left: var(--dl-space-space-oneandhalfunits);
 }
 
+@font-face {
+  font-family: TitlesAndHeaders;
+  src: url("assets/fonts/BeaufortforLOL-Bold.ttf");
+}
+
 .sharebnt-container {
   width: 165px;
   height: 60px;
