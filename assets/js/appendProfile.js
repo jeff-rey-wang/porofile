@@ -165,7 +165,7 @@ const createDiv = (
                            src="${rank1}" 
                            width="1000" height="1000"
                            class="role-list-image"/>
-                      <p style="font-family: TitlesAndHeaders;">${ranks[0]}</p>
+                      <p>${ranks[0]}</p>
                   </div>
                   <div class="column" style="font-family: TitlesAndHeaders;">
                       Ranked Flex
@@ -173,7 +173,7 @@ const createDiv = (
                            alt="Unranked Icon"
                            src="${rank2}"
                            class="role-list-image"/>
-                      <p style="font-family: TitlesAndHeaders;">${ranks[1]}</p>
+                      <p>${ranks[1]}</p>
                   </div>
               </div>
           </div>
