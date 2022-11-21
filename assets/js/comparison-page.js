@@ -180,7 +180,7 @@ function populate_col(username) {
         new champStats(
           "Teemo",
           15,
-          53,
+          87,
           6.3,
           5.7,
           5.9,
@@ -191,7 +191,7 @@ function populate_col(username) {
         new champStats(
           "Samira",
           11,
-          36,
+          63,
           8.3,
           5.1,
           5.1,
