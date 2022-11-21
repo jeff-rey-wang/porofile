@@ -158,7 +158,7 @@ const createDiv = (
                   </style>
               </head>
               <div class="row">
-                  <div class="column">
+                  <div class="column" style="font-family: TitlesAndHeaders;">
                       Ranked Solo
                       <img id="gold_icon"
                            alt="Gold Division Icon"
@@ -167,7 +167,7 @@ const createDiv = (
                            class="role-list-image"/>
                       <p style="font-family: TitlesAndHeaders;">${ranks[0]}</p>
                   </div>
-                  <div class="column">
+                  <div class="column" style="font-family: TitlesAndHeaders;">
                       Ranked Flex
                       <img id="unranked_icon"
                            alt="Unranked Icon"
@@ -232,7 +232,7 @@ const createDiv = (
           class="most-played-champs-title"
         >
           <span id="mostplayedChamps_text">
-            <span>Most Played Champions</span>
+            <span style="font-family: TitlesAndHeaders;">Most Played Champions</span>
           </span>
         </div>
         <div
@@ -501,7 +501,7 @@ const createDiv = (
         class="recenty-played-with-container recenty-played-with-root-class-name"
       >
         <div id="rpw_title_container" class="recenty-played-with-title">
-          <span id="rpw_text"><span>Recently Played With:</span></span>
+          <span id="rpw_text"><span style="font-family: TitlesAndHeaders;">Recently Played With:</span></span>
         </div>
         <div class="recenty-played-with-contents">
           
