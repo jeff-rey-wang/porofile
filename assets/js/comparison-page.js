@@ -298,7 +298,7 @@ function populate_col(username) {
           "assets/imgs/Yuumi_OriginalCentered.png"
         ),
         new champStats(
-          "Miss Fortune",
+          "Ms.Fortune",
           39,
           25,
           4.8,
