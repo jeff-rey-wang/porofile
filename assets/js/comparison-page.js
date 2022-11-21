@@ -1,72 +1,72 @@
 const Tags = {
   Escapist: [
     "Escapist",
-    "rgba(71, 204, 66, 255)",
+    "rgb(136, 212, 152, 255)",
     "This player only averages 0.33 gank deaths per game pre-15 minutes. Think carefully before attempting a gank in their lane.",
   ],
   MidgameMaster: [
     "Midgame Master",
-    "rgba(71, 204, 66, 255)",
+    "rgb(136, 212, 152, 255)",
     "This player averages 26.55 CS% in from 15 to 30 minutes, they really shine during the mid game.",
   ],
   LaneTyrant: [
     "Lane Tyrant",
-    "rgba(71, 204, 66, 255)",
+    "rgb(136, 212, 152, 255)",
     "Uh oh, this player averages 18.23 CS difference by 15 minutes! They often dominate the laning phase.",
   ],
   LateBloomer: [
     "Late Bloomer",
-    "rgba(71, 204, 66, 255)",
+    "rgb(136, 212, 152, 255)",
     "We detect you as a Late Bloomer due to the time it takes for you to make an impact on the game.",
   ],
   EarlyWarder: [
     "Early Warder",
-    "rgba(71, 204, 66, 255)",
+    "rgb(136, 212, 152, 255)",
     "This player has placed their first ward of the game during the first 3 minutes across 96.12% of their matches. It may be difficult to gank them early on.",
   ],
   VisionFocused: [
     "Vision Focused",
-    " rgba(71, 204, 66, 255)",
+    " rgb(136, 212, 152, 255)",
     "This player averages 1.77 vision score per minute. They really prioritize placing and clearing wards.",
   ],
   SolidLaner: [
     "Solid Laner",
-    " rgba(71, 204, 66, 255)",
+    " rgb(136, 212, 152, 255)",
     "This player averages 4.48 CS difference by 15 minutes. They won't dominate the early game but they won't be horrible either.",
   ],
   DeadlyDuelist: [
     "Deadly Duelist",
-    "rgba(71, 204, 66, 255)",
+    "rgb(136, 212, 152, 255)",
     "Wow, this player has a 60.14% win rate in 1v1 situations! Consider avoiding them unless you have a friend nearby to help.",
   ],
   UltimatePredator: [
     "Ultimate Predator",
-    " rgba(71, 204, 66, 255)",
+    " rgb(136, 212, 152, 255)",
     "We detect you as the Ultimate Predator because of your commitment to stalking prey throughout the game.",
   ],
   Responsible: [
     "Responsible",
-    "rgba(71, 204, 66, 255)",
+    "rgb(136, 212, 152, 255)",
     "We detect you as a Responsible player because of your commitment to overall team performance. You spend your money placing wards for your team when you have the gold to spare instead of hoarding it.",
   ],
   Pacifist: [
     "Pacfist",
-    "rgba(238, 183, 12, 255)",
+    "rgb(255, 224, 132, 255)",
     "This player only averages 1.33 kills + assists by 15 minutes so expect them to play defensively.",
   ],
   HungryForBlood: [
     "Hungry for Blood",
-    "rgba(238, 183, 12, 255)",
+    "rgb(255, 224, 132, 255)",
     "This player has participated the First Blood of the match in 47.72% of their matches. Expect them to play aggressively and look for the first kill, even if it means dying themselves.",
   ],
   ReadyToRumble: [
     "Ready to Rumble",
-    "rgba(238, 183, 12, 255)",
+    "rgb(255, 224, 132, 255)",
     "This player has gotten their first kill within the first 5 minutes of their game in 82.97% of their matches. Expect them to join or make action happen early.",
   ],
   Visionless: [
     "Visionless",
-    "rgba(221, 38, 112, 255)",
+    "rgb(234, 158, 141, 255)",
     "This player only averages 0.24 vision score per minute. They hardly contribute to helping their team control vision at all.",
   ],
 };
